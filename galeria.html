@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Camisetas Históricas</title>
+    <!-- Favicon para a aba do navegador -->
+    <link rel="icon" href="images/corinthians_logo_pequeno.png" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #1a1a1a;
+        }
+        .corinthians-black { background-color: #000000; }
+        .corinthians-white { color: #ffffff; }
+        .corinthians-text { color: #1a1a1a; }
+        .bg-gold { background-color: #ffd700; }
+        .text-gold { color: #ffd700; }
+        .border-alvinegro { border-color: #000000; }
+        .shadow-alvinegro { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); }
+        .gallery-card {
+            border: 3px solid #000000;
+            transition: all 0.3s ease-in-out;
+        }
+        .gallery-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Estilos do Carousel */
+        #carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            scroll-behavior: smooth;
+        }
+        .carousel-slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .carousel-overlay {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+        }
+        .dot {
+            transition: background-color 0.3s;
+        }
+        .dot.active {
+            background-color: #ffd700;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="corinthians-black shadow-alvinegro fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo na barra de navegação -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="images/corinthians_logo_pequeno.png" alt="Logo Corinthians" class="h-8 w-8 mr-3" onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
+                    <span class="text-white text-2xl font-black tracking-wider">TIMÃO</span>
+                </div>
+                <!-- Links de Navegação -->
+                <div class="flex space-x-6">
+                    <a href="index.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Home</a>
+                    <a href="informacoes.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Informações</a>
+                    <a href="galeria.html" class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-gold">Galeria</a>
+                    <a href="midia.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Mídia / Fotos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        
+        <!-- NOVO BANNER PRINCIPAL: CAROUSEL DINÂMICO -->
+        <section id="main-carousel" class="relative w-full overflow-hidden h-[60vh] md:h-[75vh] border-b-8 border-gold">
+            <div id="carousel-container" class="flex h-full">
+                
+                <!-- Slide 1: 2012 - Glória Eterna -->
+                <div class="carousel-slide" data-index="0">
+                    <img src="images/banner_2012_liberta_hq.jpg" alt="Comemoração da Libertadores 2012" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/000000/ffffff?text=GLORIA+ETERNA+2012'">
+                    <div class="carousel-overlay absolute inset-0 flex items-center justify-center p-8">
+                        <div class="text-center max-w-3xl">
+                            <p class="text-2xl text-gold font-bold mb-2">Momento Histórico</p>
+                            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
+                                Campeão Invicto da América
+                            </h1>
+                            <p class="mt-4 text-lg md:text-2xl text-gray-300 font-medium">
+                                A conquista da Copa Libertadores de 2012: a Fiel fez o Pacaembu tremer!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: 2000 - Primeiro Mundial -->
+                <div class="carousel-slide" data-index="1">
+                    <img src="images/banner_2000_mundial_hq.jpg" alt="Comemoração do Mundial 2000" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/000000/ffffff?text=MUNDIAL+2000'">
+                    <div class="carousel-overlay absolute inset-0 flex items-center justify-center p-8">
+                        <div class="text-center max-w-3xl">
+                            <p class="text-2xl text-gold font-bold mb-2">Primeiro Título Mundial</p>
+                            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
+                                O Mundo é Alvinegro
+                            </h1>
+                            <p class="mt-4 text-lg md:text-2xl text-gray-300 font-medium">
+                                A consagração no Maracanã, levantando o primeiro Mundial de Clubes da FIFA em 2000.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: 1982 - Democracia Corinthiana -->
+                <div class="carousel-slide" data-index="2">
+                    <img src="images/banner_democracia_hq.jpg" alt="Sócrates e a Democracia Corinthiana" class="absolute inset-0 w-full h-full object-cover opacity-70" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/000000/ffffff?text=DEMOCRACIA+1982'">
+                    <div class="carousel-overlay absolute inset-0 flex items-center justify-center p-8">
+                        <div class="text-center max-w-3xl">
+                            <p class="text-2xl text-gold font-bold mb-2">Ícone Político e Esportivo</p>
+                            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
+                                Democracia Corinthiana
+                            </h1>
+                            <p class="mt-4 text-lg md:text-2xl text-gray-300 font-medium">
+                                Um movimento que revolucionou o futebol e a sociedade, liderado por Sócrates e Cia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navegação: Setas Laterais -->
+            <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-80 transition duration-300 z-20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-80 transition duration-300 z-20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+
+            <!-- Indicadores (Dots) -->
+            <div id="carousel-dots" class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-20">
+                <!-- Dots serão gerados via JS -->
+            </div>
+        </section>
+
+
+        <!-- Seção da Galeria de Camisetas -->
+        <section id="camisetas-galeria" class="py-16 px-4 md:px-8 bg-gray-100">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl font-extrabold corinthians-text mb-12 border-b-4 border-black inline-block pb-1">Camisetas Históricas em Ordem Cronológica</h2>
+                
+                <!-- Grade de Galeria: 4 colunas em telas grandes, 2 em telas pequenas -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Item 1: 1910 - Primeira Camisa -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/camisa_1910_hq.jpg" alt="Camiseta de 1910 - Creme" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F5F5DC/1a1a1a?text=Camisa+1910+-+Creme'">
+                        <h3 class="text-xl font-bold corinthians-text">1910</h3>
+                        <p class="text-xs text-gray-600">A camisa **creme** original. O início de uma lenda centenária.</p>
+                    </div>
+                    
+                    <!-- Item 2: 1920 - A Alvinegra Clássica -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/camisa_1920_hq.jpg" alt="Camiseta de 1920 - Alvinegra Listrada" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1920+-+Alvinegra+Listrada'">
+                        <h3 class="text-xl font-bold corinthians-text">Anos 20</h3>
+                        <p class="text-xs text-gray-600">O uniforme **alvinegro listrado** se consolida como padrão oficial.</p>
+                    </div>
+                    
+                    <!-- Item 3: 1977 - Quebra do Jejum -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/camisa_1977_hq.jpg" alt="Camiseta de 1977 - Quebra do Jejum" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1977+-+Quebra+Jejum'">
+                        <h3 class="text-xl font-bold corinthians-text">1977</h3>
+                        <p class="text-xs text-gray-600">O manto sagrado da **Quebra do Jejum**, simples e inesquecível.</p>
+                    </div>
+
+                    <!-- Item 4: 1982/83 - Democracia Corinthiana -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/camisa_1982_hq.jpg" alt="Camiseta de 1982 - Democracia Corinthiana" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1982+-+Autogestão'">
+                        <h3 class="text-xl font-bold corinthians-text">1982</h3>
+                        <p class="text-xs text-gray-600">A camisa da **Democracia Corinthiana** com o patrocínio "Kalunga".</p>
+                    </div>
+                    
+                    <!-- Item 5: 1990 - Primeiro Brasileiro -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/camisa_1990_hq.jpg" alt="Camiseta de 1990 - 1º Brasileiro" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1990+-+1º+Brasileiro'">
+                        <h3 class="text-xl font-bold corinthians-text">1990</h3>
+                        <p class="text-xs text-gray-600">O uniforme do primeiro título de **Campeonato Brasileiro** do clube.</p>
+                    </div>
+
+                    <!-- Item 6: 2000 - Mundial de Clubes -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/camisa_2000_hq.jpg" alt="Camiseta de 2000 - Mundial" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2000+-+Mundial'">
+                        <h3 class="text-xl font-bold corinthians-text">2000</h3>
+                        <p class="text-xs text-gray-600">O manto do primeiro **Mundial de Clubes da FIFA**, com Capetinha e Cia.</p>
+                    </div>
+                    
+                    <!-- Item 7: 2012 - Libertadores e Bi-Mundial -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/camisa_2012_hq.jpg" alt="Camiseta de 2012 - Glória Eterna" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2012+-+Glória+Eterna'">
+                        <h3 class="text-xl font-bold corinthians-text">2012</h3>
+                        <p class="text-xs text-gray-600">O uniforme da **Glória Eterna**, Libertadores invicta e Bi-Mundial com Sheik.</p>
+                    </div>
+
+                    <!-- Item 8: 2015 - Hexa Brasileiro -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/camisa_2015_hq.jpg" alt="Camiseta de 2015 - Hexa Brasileiro" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2015+-+Hexa+Brasileiro'">
+                        <h3 class="text-xl font-bold corinthians-text">2015</h3>
+                        <p class="text-xs text-gray-600">O uniforme do **Hexacampeonato Brasileiro**, com a listra lateral ousada.</p>
+                    </div>
+
+                    <!-- Item 9: 2024 - Atual -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/camisa_2024_hq.jpg" alt="Camiseta de 2024 - Atual" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2024+-+Atual'">
+                        <h3 class="text-xl font-bold corinthians-text">2024</h3>
+                        <p class="text-xs text-gray-600">O **manto atual**, seguindo a tradição de listras verticais alvinegras.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="rodape" class="corinthians-black py-8 px-4 md:px-8 mt-12">
+        <div class="max-w-6xl mx-auto text-center text-gray-300">
+            <h4 class="text-xl font-bold mb-4 corinthians-white">Site Desenvolvido para a Atividade Final de DSA1</h4>
+            <p class="text-sm mb-2">Turma: INF1ET</p>
+            <p class="text-sm">Desenvolvido em 2025</p>
+            <div class="mt-4 text-xs">
+                <p>Integrantes:</p>
+                <p>° Pedro Guilherme N°26</p>
+                <p>° Ricardo Ramalho N°32</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para o Carousel -->
+    <script>
+        const carouselContainer = document.getElementById('carousel-container');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carousel-dots');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        // Função para atualizar a posição do carousel
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            carouselContainer.style.transform = `translateX(${offset}%)`;
+            updateDots();
+        }
+
+        // Função para atualizar os indicadores (dots)
+        function updateDots() {
+            dotsContainer.innerHTML = '';
+            slides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot', 'w-3', 'h-3', 'bg-white', 'bg-opacity-50', 'rounded-full', 'cursor-pointer', 'shadow-lg');
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                }
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                    resetAutoSlide();
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        // Navegação para o próximo slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        // Navegação para o slide anterior
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Inicia o auto-slide
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 5000); // Muda a cada 5 segundos
+        }
+
+        // Reseta o temporizador do auto-slide após interação manual
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Event Listeners para botões de navegação
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+
+        // Inicialização
+        window.onload = function() {
+            updateCarousel(); // Garante o posicionamento inicial e a criação dos dots
+            startAutoSlide(); // Inicia o movimento automático
+        };
+    </script>
+
+</body>
+</html>
