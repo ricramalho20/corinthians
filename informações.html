@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações - Sport Club Corinthians Paulista</title>
+    <!-- Favicon para a aba do navegador -->
+    <link rel="icon" href="images/corinthians_logo_pequeno.png" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #1a1a1a;
+        }
+        .corinthians-black { background-color: #000000; }
+        .corinthians-white { color: #ffffff; }
+        .corinthians-text { color: #1a1a1a; }
+        .bg-gold { background-color: #ffd700; }
+        .text-gold { color: #ffd700; }
+        .border-alvinegro { border-color: #000000; }
+        .shadow-alvinegro { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); }
+        .info-card {
+            border-left: 5px solid #000000;
+            transition: transform 0.3s ease-in-out;
+        }
+        .info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .title-highlight {
+            position: relative;
+            display: inline-block;
+        }
+        .title-highlight::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background-color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="corinthians-black shadow-alvinegro fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo na barra de navegação -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="images/corinthians_logo_pequeno.png" alt="Logo Corinthians" class="h-8 w-8 mr-3" onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
+                    <span class="text-white text-2xl font-black tracking-wider">TIMÃO</span>
+                </div>
+                <!-- Links de Navegação -->
+                <div class="flex space-x-6">
+                    <a href="index.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Home</a>
+                    <!-- Link ativo -->
+                    <a href="informacoes.html" class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-gold">Informações</a>
+                    <a href="galeria.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Galeria</a>
+                    <a href="midia.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Mídia / Fotos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        
+        <!-- Header/Banner Principal -->
+        <section class="py-20 corinthians-black text-center border-b-8 border-gold">
+            <div class="max-w-4xl mx-auto px-4">
+                <h1 class="text-6xl font-extrabold text-white tracking-tight">Sport Club Corinthians Paulista</h1>
+                <p class="mt-4 text-xl text-gray-300 font-medium">
+                    Conheça a história, os títulos e os detalhes do Time do Povo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção 1: Fatos Rápidos -->
+        <section class="py-12 px-4 md:px-8 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-extrabold corinthians-text mb-8 title-highlight">Fatos Rápidos</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md info-card">
+                        <p class="text-4xl font-black text-gold mb-2">1910</p>
+                        <p class="text-lg font-semibold">Data de Fundação</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md info-card">
+                        <p class="text-4xl font-black text-gold mb-2">Alvinegro</p>
+                        <p class="text-lg font-semibold">Cores Oficiais</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md info-card">
+                        <p class="text-4xl font-black text-gold mb-2">Timão</p>
+                        <p class="text-lg font-semibold">Apelido Principal</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md info-card">
+                        <p class="text-4xl font-black text-gold mb-2">Fiel</p>
+                        <p class="text-lg font-semibold">Nome da Torcida</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: História -->
+        <section class="py-16 px-4 md:px-8 bg-gray-100">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-extrabold corinthians-text mb-8 title-highlight">A História do Time do Povo</h2>
+                
+                <div class="space-y-6 text-lg text-gray-700">
+                    <p>
+                        O Sport Club Corinthians Paulista foi fundado em **1º de setembro de 1910** por um grupo de operários no bairro do Bom Retiro, em São Paulo. Inspirados por um time inglês de turnê pelo Brasil, eles criaram um clube que se tornaria um símbolo de resistência e popularidade. A origem humilde consolidou a identidade do Corinthians como o **Time do Povo**.
+                    </p>
+                    <p>
+                        Após um início desafiador, o clube se firmou rapidamente no cenário paulista, conquistando seu primeiro título estadual em 1914. No entanto, foi a partir da década de 70, com a lendária **"Democracia Corinthiana"** liderada por Sócrates, que o clube ganhou projeção política e social, defendendo valores de liberdade dentro e fora de campo.
+                    </p>
+                    <p>
+                        A glória nacional chegou em 1990 com o primeiro **Campeonato Brasileiro**. O ápice internacional veio em 2000, com o título de **Campeão Mundial da FIFA**, e novamente em 2012, quando o time conquistou a inédita **Copa Libertadores da América** de forma invicta, coroada pelo bicampeonato mundial.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção 3: Principais Títulos -->
+        <section class="py-16 px-4 md:px-8 bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-extrabold corinthians-text mb-8 title-highlight">Os Títulos Mais Vencedores</h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    
+                    <!-- Coluna 1: Mundiais -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-b-4 border-gold">
+                        <h3 class="text-2xl font-bold corinthians-text mb-3">Mundial de Clubes da FIFA</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 pl-4">
+                            <li>2000</li>
+                            <li>2012</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 2: Libertadores -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-b-4 border-gold">
+                        <h3 class="text-2xl font-bold corinthians-text mb-3">Copa Libertadores</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 pl-4">
+                            <li>2012 (Invicto)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 3: Brasileiros -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-b-4 border-gold">
+                        <h3 class="text-2xl font-bold corinthians-text mb-3">Campeonato Brasileiro</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 pl-4">
+                            <li>1990, 1998, 1999</li>
+                            <li>2005, 2011, 2015</li>
+                            <li>2017</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 4: Copa do Brasil / Paulistas -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-b-4 border-gold">
+                        <h3 class="text-2xl font-bold corinthians-text mb-3">Outros Nacionais / Estaduais</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 pl-4">
+                            <li>Copa do Brasil (3 títulos)</li>
+                            <li>Supercopa do Brasil (1 título)</li>
+                            <li>Campeonato Paulista (30 títulos)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Estádio - Neo Química Arena -->
+        <section class="py-16 px-4 md:px-8 corinthians-black text-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-extrabold text-gold mb-8 title-highlight">A Casa da Fiel: Neo Química Arena</h2>
+                
+                <div class="md:flex md:space-x-8 items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <!-- Imagem Placeholder da Arena -->
+                        <img src="images/arena_corinthians_hq.jpg" alt="Neo Química Arena" class="w-full h-auto rounded-xl shadow-alvinegro border-4 border-gold" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffd700?text=NEO+QUÍMICA+ARENA'">
+                    </div>
+                    <div class="md:w-1/2 space-y-4 text-gray-300">
+                        <p class="font-bold text-xl">Inaugurada em 2014, a Neo Química Arena (anteriormente Arena Corinthians) é um dos estádios mais modernos da América Latina e um marco na história do clube.</p>
+                        <ul class="space-y-2 list-disc list-inside pl-4">
+                            <li><span class="font-semibold text-white">Capacidade:</span> Aproximadamente 49.200 espectadores.</li>
+                            <li><span class="font-semibold text-white">Localização:</span> Itaquera, São Paulo.</li>
+                            <li><span class="font-semibold text-white">Estrutura:</span> Foi um dos palcos da Copa do Mundo FIFA 2014 e é conhecida por sua fachada imponente e telão de LED.</li>
+                            <li><span class="font-semibold text-white">Recordes:</span> Palco de grandes vitórias e recordes de público da história recente do clube.</li>
+                        </ul>
+                        <p class="text-base text-gray-400">A Arena é o principal ponto de encontro da Fiel, um templo de paixão e glória alvinegra.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="rodape" class="corinthians-black py-8 px-4 md:px-8 mt-12">
+        <div class="max-w-6xl mx-auto text-center text-gray-300">
+            <h4 class="text-xl font-bold mb-4 corinthians-white">Site Desenvolvido para a Atividade Final de DSA1</h4>
+            <p class="text-sm mb-2">Turma: INF1ET</p>
+            <p class="text-sm">Desenvolvido em 2025</p>
+            <div class="mt-4 text-xs">
+                <p>Integrantes:</p>
+                <p>° Pedro Guilherme N°26</p>
+                <p>° Ricardo Ramalho N°32</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
