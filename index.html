@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corinthians - O Time do Povo</title>
     <!-- Favicon para a aba do navegador -->
     <link rel="icon" href="images/corinthians_logo_pequeno.png" type="image/png">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -15,15 +16,37 @@
             background-color: #f7f7f7;
             color: #1a1a1a;
         }
-        .corinthians-black { background-color: #000000; }
-        .corinthians-white { color: #ffffff; }
-        .corinthians-text { color: #1a1a1a; }
-        .bg-gold { background-color: #ffd700; }
-        .text-gold { color: #ffd700; }
-        .border-alvinegro { border-color: #000000; }
-        .shadow-alvinegro { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); }
+
+        .corinthians-black {
+            background-color: #000000;
+        }
+
+        .corinthians-white {
+            color: #ffffff;
+        }
+
+        .corinthians-text {
+            color: #1a1a1a;
+        }
+
+        .bg-gold {
+            background-color: #ffd700;
+        }
+
+        .text-gold {
+            color: #ffd700;
+        }
+
+        .border-alvinegro {
+            border-color: #000000;
+        }
+
+        .shadow-alvinegro {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
     </style>
 </head>
+
 <body>
 
     <nav class="corinthians-black shadow-alvinegro fixed w-full z-10">
@@ -31,35 +54,43 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo na barra de navegação -->
                 <div class="flex-shrink-0 flex items-center">
-                    <img src="images/Corinthians_simbolo.png" alt="Logo Corinthians" class="h-8 w-8 mr-3" onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
+                    <img src="images/Corinthians_simbolo.png" alt="Logo Corinthians" class="h-8 w-8 mr-3"
+                        onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
                     <span class="text-white text-2xl font-black tracking-wider">CORINTHIANS</span>
                 </div>
                 <!-- Links de Navegação -->
                 <div class="flex space-x-6">
-                    <a href="index.html" class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-white">Home</a>
-                    <a href="informações.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Informações</a>
-                    <a href="galeria.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Galeria</a>
-                    <a href="midia.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Mídia / Fotos</a>
+                    <a href="index.html"
+                        class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-white">Home</a>
+                    <a href="informações.html"
+                        class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Informações</a>
+                    <a href="galeria.html"
+                        class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Galeria</a>
+                    <a href="midia.html"
+                        class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Mídia /
+                        Fotos</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <main class="pt-16">
-        
-        <!-- Seção Principal / Banner -->
-        <section id="home" class="relative h-[65vh] md:h-[90vh] flex items-center justify-center">
-            <!-- Imagem de alta qualidade e enquadramento garantido por object-cover -->
-            <img src="images/banner_principal.png" alt="Estádio Neo Química Arena com torcida" class="absolute inset-0 w-full h-full object-cover opacity-80" onerror="this.onerror=null; this.src='https://placehold.co/1600x900/000000/ffffff?text=Corinthians+Banner+Principal+HQ'">
-            
-            <div class="relative z-10 text-center p-8 bg-black bg-opacity-80 rounded-2xl shadow-alvinegro border-2 border-white">
+
+        <section id="home" class="relative h-[50vh] md:h-[70vh] flex items-center justify-center">
+            <img src="images/banner_principal1.jpg" alt="Estádio Neo Química Arena com torcida"
+                class="absolute inset-0 w-full h-full object-cover opacity-90"
+                onerror="this.onerror=null; this.src='https://placehold.co/1600x900/000000/ffffff?text=Corinthians+Banner+Principal+HQ'">
+
+            <div
+                class="relative z-10 text-center p-8 bg-black bg-opacity-80 rounded-2xl shadow-alvinegro border-2 border-white">
                 <h1 class="text-4xl sm:text-7xl font-extrabold corinthians-white tracking-tighter leading-tight">
                     Sport Club Corinthians Paulista
                 </h1>
                 <p class="mt-4 text-xl sm:text-3xl text-gray-300 font-semibold">
                     A Força da Fiel, o Time do Povo.
                 </p>
-                <a href="#conquistas" class="inline-block mt-6 px-10 py-3 text-lg font-bold corinthians-text bg-gold rounded-full transition duration-300 hover:bg-yellow-600 shadow-lg">
+                <a href="#conquistas"
+                    class="inline-block mt-6 px-10 py-3 text-lg font-bold corinthians-text bg-gold rounded-full transition duration-300 hover:bg-yellow-600 shadow-lg">
                     Ver Maiores Conquistas
                 </a>
             </div>
@@ -68,28 +99,41 @@
         <!-- Seção 1: Principais Conquistas -->
         <section id="conquistas" class="py-16 px-4 md:px-8 bg-white">
             <div class="max-w-6xl mx-auto text-center">
-                <h2 class="text-4xl font-extrabold corinthians-text mb-12 border-b-4 border-black inline-block pb-1">Principais Conquistas</h2>
-                
+                <h2 class="text-4xl font-extrabold corinthians-text mb-12 border-b-4 border-black inline-block pb-1">
+                    Principais Conquistas</h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Conquista 1: Mundial -->
-                    <div class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
-                        <img src="images/logo_mundial.png" alt="Logo Mundial de Clubes FIFA" class="h-16 w-16 mx-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/64x64/000000/ffffff?text=MUNDIAL'">
+                    <div
+                        class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
+                        <img src="images/logo_mundial.png" alt="Logo Mundial de Clubes FIFA"
+                            class="h-16 w-16 mx-auto mb-4"
+                            onerror="this.onerror=null; this.src='https://placehold.co/64x64/000000/ffffff?text=MUNDIAL'">
                         <h3 class="text-2xl font-bold corinthians-text mb-2">Bi-Mundial FIFA</h3>
-                        <p class="text-gray-600">A glória máxima, conquistada em 2000 e 2012, unindo o planeta sob o manto alvinegro.</p>
+                        <p class="text-gray-600">A glória máxima, conquistada em 2000 e 2012, unindo o planeta sob o
+                            manto alvinegro.</p>
                     </div>
-                    
+
                     <!-- Conquista 2: Libertadores -->
-                    <div class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
-                        <img src="images/logo_libertadores.png" alt="Logo Copa Libertadores" class="h-16 w-16 mx-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/64x64/000000/ffffff?text=LIBERTA'">
+                    <div
+                        class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
+                        <img src="images/logo_libertadores.png" alt="Logo Copa Libertadores"
+                            class="h-16 w-16 mx-auto mb-4"
+                            onerror="this.onerror=null; this.src='https://placehold.co/64x64/000000/ffffff?text=LIBERTA'">
                         <h3 class="text-2xl font-bold corinthians-text mb-2">Libertadores Invicto</h3>
-                        <p class="text-gray-600">O título inédito de 2012, o maior sonho realizado sem sofrer derrotas na campanha.</p>
+                        <p class="text-gray-600">O título inédito de 2012, o maior sonho realizado sem sofrer derrotas
+                            na campanha.</p>
                     </div>
-                    
+
                     <!-- Conquista 3: Brasileiro -->
-                    <div class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
-                        <img src="images/logo_brasileiro.png" alt="Logo Campeonato Brasileiro" class="h-16 w-16 mx-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/64x64/000000/ffffff?text=BRASILEIRO'">
+                    <div
+                        class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
+                        <img src="images/logo_brasileirao.png" alt="Logo Campeonato Brasileiro"
+                            class="h-16 w-16 mx-auto mb-4"
+                            onerror="this.onerror=null; this.src='https://placehold.co/64x64/000000/ffffff?text=BRASILEIRO'">
                         <h3 class="text-2xl font-bold corinthians-text mb-2">Hepta Brasileiro</h3>
-                        <p class="text-gray-600">Sete vezes campeão nacional, consolidando a hegemonia em diferentes décadas.</p>
+                        <p class="text-gray-600">Sete vezes campeão nacional, consolidando a hegemonia em diferentes
+                            décadas.</p>
                     </div>
                 </div>
             </div>
@@ -98,61 +142,81 @@
         <!-- Seção 2: Ídolos (Galeria em Destaque) -->
         <section id="idolos" class="py-16 px-4 md:px-8 corinthians-black">
             <div class="max-w-6xl mx-auto text-center">
-                <h2 class="text-4xl font-extrabold corinthians-white mb-12 border-b-4 text-gold inline-block pb-1">Nossos Maiores Ídolos</h2>
-                
+                <h2 class="text-4xl font-extrabold corinthians-white mb-12 border-b-4 text-gold inline-block pb-1">
+                    Nossos Maiores Ídolos</h2>
+
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    
+
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
-                        <img src="images/idolo_socrates_hq.jpg" alt="Foto de Sócrates em alta qualidade" class="w-full h-80 object-cover rounded-lg border-2 border-black" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Socrates+HQ'">
+                        <img src="images/idolo_socrates_hq.jpg" alt="Foto de Sócrates em alta qualidade"
+                            class="w-full h-80 object-cover rounded-lg border-2 border-black"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Socrates+HQ'">
                         <h3 class="text-xl font-bold corinthians-text mt-3">Sócrates</h3>
                         <p class="text-sm text-gray-600">O Doutor e líder da Democracia.</p>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
-                        <img src="images/idolo_rivelino_hq.jpg" alt="Foto de Rivelino em alta qualidade" class="w-full h-80 object-cover rounded-lg border-2 border-black" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Rivelino+HQ'">
+                        <img src="images/idolo_rivelino_hq.jpg" alt="Foto de Rivelino em alta qualidade"
+                            class="w-full h-80 object-cover rounded-lg border-2 border-black"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Rivelino+HQ'">
                         <h3 class="text-xl font-bold corinthians-text mt-3">Rivelino</h3>
                         <p class="text-sm text-gray-600">O Patada Atômica e o Reizinho do Parque.</p>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
-                        <img src="images/idolo_carlos_tevez_hq.jpg" alt="Foto de Carlos Tevez em alta qualidade" class="w-full h-80 object-cover rounded-lg border-2 border-black" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Tevez+HQ'">
+                        <img src="images/idolo_carlos_tevez_hq.jpg" alt="Foto de Carlos Tevez em alta qualidade"
+                            class="w-full h-80 object-cover rounded-lg border-2 border-black"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Tevez+HQ'">
                         <h3 class="text-xl font-bold corinthians-text mt-3">Carlos Tevez</h3>
                         <p class="text-sm text-gray-600">A raça argentina que liderou a conquista de 2005.</p>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
-                        <img src="images/idolo_cassio_hq.jpg" alt="Foto de Cássio em alta qualidade" class="w-full h-80 object-cover rounded-lg border-2 border-black" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
+                        <img src="images/idolo_cassio_hq.jpg" alt="Foto de Cássio em alta qualidade"
+                            class="w-full h-80 object-cover rounded-lg border-2 border-black"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
                         <h3 class="text-xl font-bold corinthians-text mt-3">Cássio</h3>
                         <p class="text-sm text-gray-600">O Gigante e o maior campeão do clube.</p>
                     </div>
 
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
-                        <img src="images/idolo_ronaldo_hq.jpg" alt="Foto de Cássio em alta qualidade" class="w-full h-80 object-cover rounded-lg border-2 border-black" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
+                        <img src="images/idolo_ronaldo_hq.jpg" alt="Foto de Cássio em alta qualidade"
+                            class="w-full h-80 object-cover rounded-lg border-2 border-black"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
                         <h3 class="text-xl font-bold corinthians-text mt-3">Ronaldo Fenômeno</h3>
                         <p class="text-sm text-gray-600">A lenda global que escolheu o Timão para a sua volta.</p>
                     </div>
 
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
-                        <img src="images/idolo_marcelinho_hq.jpg" alt="Foto de Cássio em alta qualidade" class="w-full h-80 object-cover rounded-lg border-2 border-black" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
+                        <img src="images/idolo_marcelinho_hq.jpg" alt="Foto de Cássio em alta qualidade"
+                            class="w-full h-80 object-cover rounded-lg border-2 border-black"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
                         <h3 class="text-xl font-bold corinthians-text mt-3">Marcelinho Carioca</h3>
                         <p class="text-sm text-gray-600">O Pé de Anjo e o maior artilheiro da história do clube.</p>
                     </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
-                        <img src="images/idolo_emerson_hq.jpg" alt="Foto de Cássio em alta qualidade" class="w-full h-80 object-cover rounded-lg border-2 border-black" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
-                        <h3 class="text-xl font-bold corinthians-text mt-3">Emerson Sheik</h3>
-                        <p class="text-sm text-gray-600">O herói improvável. Os dois gols da glória eterna na Libertadores 2012.</p>
-                    </div>  
 
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
-                        <img src="images/idolo_capetinha_hq.jpg" alt="Foto de Cássio em alta qualidade" class="w-full h-80 object-cover rounded-lg border-2 border-black" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
+                        <img src="images/idolo_emerson_hq.jpg" alt="Foto de Cássio em alta qualidade"
+                            class="w-full h-80 object-cover rounded-lg border-2 border-black"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
+                        <h3 class="text-xl font-bold corinthians-text mt-3">Emerson Sheik</h3>
+                        <p class="text-sm text-gray-600">O herói improvável. Os dois gols da glória eterna na
+                            Libertadores 2012.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
+                        <img src="images/idolo_capetinha_hq.jpg" alt="Foto de Cássio em alta qualidade"
+                            class="w-full h-80 object-cover rounded-lg border-2 border-black"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/ffffff?text=Cassio+HQ'">
                         <h3 class="text-xl font-bold corinthians-text mt-3">Edmilson Capetinha</h3>
-                        <p class="text-sm text-gray-600">O Drible Irreverente. Velocidade, habilidade e campeão do Mundial de 2000.</p>
-                    </div>  
+                        <p class="text-sm text-gray-600">O Drible Irreverente. Velocidade, habilidade e campeão do
+                            Mundial de 2000.</p>
+                    </div>
                 </div>
-                
+
                 <div class="text-center mt-10">
-                    <a href="galeria.html#idolos" class="inline-block px-8 py-3 text-lg font-semibold corinthians-text bg-gold rounded-full transition duration-300 hover:bg-yellow-600 shadow-lg">
+                    <a href="galeria.html#idolos"
+                        class="inline-block px-8 py-3 text-lg font-semibold corinthians-text bg-gold rounded-full transition duration-300 hover:bg-yellow-600 shadow-lg">
                         Ver Galeria
                     </a>
                 </div>
@@ -162,32 +226,42 @@
         <!-- Seção 3: Localização (Neo Química Arena) -->
         <section id="localizacao" class="py-16 px-4 md:px-8 bg-gray-100">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-extrabold corinthians-text text-center mb-12 border-b-4 border-black inline-block pb-1">Nossa Casa: Neo Química Arena</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-xl shadow-alvinegro p-6">
+                <h2
+                    class="text-4xl font-extrabold corinthians-text text-center mb-12 border-b-4 border-black inline-block pb-1">
+                    Nossa Casa: Neo Química Arena</h2>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-xl shadow-alvinegro p-6">
                     <div class="order-2 md:order-1">
-                        <img src="images/arena_fechada.jpg_large" alt="Fachada da Neo Química Arena" class="w-full h-72 object-cover rounded-xl border-4 border-black" onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a1a1a/ffffff?text=Arena+Fachada+HQ'">
+                        <img src="images/arena_fechada.png" alt="Fachada da Neo Química Arena"
+                            class="w-full h-72 object-cover rounded-xl border-4 border-black"
+                            onerror="this.onerror=null; this.src='https://placehold.co/800x600/1a1a1a/ffffff?text=Arena+Fachada+HQ'">
                     </div>
                     <div class="order-1 md:order-2 p-4">
                         <h3 class="text-3xl font-bold corinthians-text mb-4">O Templo Alvinegro</h3>
                         <p class="text-lg text-gray-700 mb-4">
-                            Inaugurada em 2014, a Neo Química Arena é o palco moderno e imponente dos jogos do Corinthians. Localizada em Itaquera, é um símbolo da força e da capacidade da Fiel.
-                        </p>    
+                            Inaugurada em 2014, a Neo Química Arena é o palco moderno e imponente dos jogos do
+                            Corinthians. Localizada em Itaquera, é um símbolo da força e da capacidade da Fiel.
+                        </p>
                         <ul class="text-gray-700 space-y-2">
                             <li class="flex items-center">
-                                <span class="corinthians-black rounded-full w-5 h-5 flex items-center justify-center mr-2 text-sm text-white">★</span>
+                                <span
+                                    class="corinthians-black rounded-full w-5 h-5 flex items-center justify-center mr-2 text-sm text-white">★</span>
                                 Capacidade: Mais de 49.000 espectadores.
                             </li>
                             <li class="flex items-center">
-                                <span class="corinthians-black rounded-full w-5 h-5 flex items-center justify-center mr-2 text-sm text-white">★</span>
+                                <span
+                                    class="corinthians-black rounded-full w-5 h-5 flex items-center justify-center mr-2 text-sm text-white">★</span>
                                 Palco de Abertura da Copa do Mundo FIFA 2014.
                             </li>
                             <li class="flex items-center">
-                                <span class="corinthians-black rounded-full w-5 h-5 flex items-center justify-center mr-2 text-sm text-white">★</span>
+                                <span
+                                    class="corinthians-black rounded-full w-5 h-5 flex items-center justify-center mr-2 text-sm text-white">★</span>
                                 Local: Itaquera, São Paulo.
                             </li>
                         </ul>
-                        <a href="informações.html" class="inline-block mt-6 px-6 py-2 text-md font-semibold text-white corinthians-black rounded-full transition duration-300 hover:bg-gray-800 shadow-lg">
+                        <a href="informações.html"
+                            class="inline-block mt-6 px-6 py-2 text-md font-semibold text-white corinthians-black rounded-full transition duration-300 hover:bg-gray-800 shadow-lg">
                             Mais Detalhes
                         </a>
                     </div>
@@ -201,7 +275,8 @@
             <p class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
                 Fotos da torcida, lances em campo e a Neo Química Arena em destaque.
             </p>
-            <a href="midia.html" class="inline-block px-8 py-3 text-lg font-semibold text-white corinthians-black rounded-full transition duration-300 hover:bg-gray-800 shadow-lg">
+            <a href="midia.html"
+                class="inline-block px-8 py-3 text-lg font-semibold text-white corinthians-black rounded-full transition duration-300 hover:bg-gray-800 shadow-lg">
                 Ver Fotos Gerais
             </a>
         </section>
@@ -222,4 +297,5 @@
     </footer>
 
 </body>
+
 </html>
