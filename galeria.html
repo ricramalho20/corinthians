@@ -57,21 +57,30 @@
 </head>
 <body>
 
-    <nav class="corinthians-black shadow-alvinegro fixed w-full z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo na barra de navegação -->
-                <div class="flex-shrink-0 flex items-center">
-                    <img src="images/corinthians_logo_pequeno.png" alt="Logo Corinthians" class="h-8 w-8 mr-3" onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
+      <nav class="bg-black shadow-alvinegro fixed w-full z-10">
+        <div class="w-full">
+            <div class="flex items-center h-16">
+ 
+                <!-- Logo + texto TIMÃO -->
+                <div class="flex items-center pl-3"> <!-- pequeno espaço da borda -->
+                    <img src="images/Corinthians_simbolo.png" alt="Logo Corinthians" class="h-8 w-8 mr-2"
+                        onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
                     <span class="text-white text-2xl font-black tracking-wider">TIMÃO</span>
                 </div>
-                <!-- Links de Navegação -->
-                <div class="flex space-x-6">
-                    <a href="index.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Home</a>
-                    <a href="informações.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Informações</a>
-                    <a href="galeria.html" class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-gold">Galeria</a>
-                    <a href="midia.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Mídia / Fotos</a>
+ 
+                <!-- Links de navegação - levemente mais à direita -->
+                <div class="flex space-x-6 ml-8">
+                    <a href="index.html"
+                        class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Home</a>
+                    <a href="informações.html"
+                        class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-gold">Informações</a>
+                    <a href="galeria.html"
+                        class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Galeria</a>
+                    <a href="midia.html"
+                        class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Mídia /
+                        Fotos</a>
                 </div>
+ 
             </div>
         </div>
     </nav>
@@ -84,7 +93,7 @@
                 
                 <!-- Slide 1: 2012 - Glória Eterna -->
                 <div class="carousel-slide" data-index="0">
-                    <img src="images/banner_2012_liberta_hq.jpg" alt="Comemoração da Libertadores 2012" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/000000/ffffff?text=GLORIA+ETERNA+2012'">
+                    <img src="images/teste4.jpg" alt="Comemoração da Libertadores 2012" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/000000/ffffff?text=GLORIA+ETERNA+2012'">
                     <div class="carousel-overlay absolute inset-0 flex items-center justify-center p-8">
                         <div class="text-center max-w-3xl">
                             <p class="text-2xl text-gold font-bold mb-2">Momento Histórico</p>
@@ -100,7 +109,7 @@
 
                 <!-- Slide 2: 2000 - Primeiro Mundial -->
                 <div class="carousel-slide" data-index="1">
-                    <img src="images/banner_2000_mundial_hq.jpg" alt="Comemoração do Mundial 2000" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/000000/ffffff?text=MUNDIAL+2000'">
+                    <img src="images/mundial.png" alt="Comemoração do Mundial 2000" class="absolute inset-0 w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/000000/ffffff?text=MUNDIAL+2000'">
                     <div class="carousel-overlay absolute inset-0 flex items-center justify-center p-8">
                         <div class="text-center max-w-3xl">
                             <p class="text-2xl text-gold font-bold mb-2">Primeiro Título Mundial</p>
@@ -116,7 +125,7 @@
 
                 <!-- Slide 3: 1982 - Democracia Corinthiana -->
                 <div class="carousel-slide" data-index="2">
-                    <img src="images/banner_democracia_hq.jpg" alt="Sócrates e a Democracia Corinthiana" class="absolute inset-0 w-full h-full object-cover opacity-70" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/000000/ffffff?text=DEMOCRACIA+1982'">
+                    <img src="images/democracia.png" alt="Sócrates e a Democracia Corinthiana" class="absolute inset-0 w-full h-full object-cover opacity-70" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/000000/ffffff?text=DEMOCRACIA+1982'">
                     <div class="carousel-overlay absolute inset-0 flex items-center justify-center p-8">
                         <div class="text-center max-w-3xl">
                             <p class="text-2xl text-gold font-bold mb-2">Ícone Político e Esportivo</p>
@@ -157,64 +166,70 @@
                     
                     <!-- Item 1: 1910 - Primeira Camisa -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="images/camisa_1910_hq.jpg" alt="Camiseta de 1910 - Creme" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F5F5DC/1a1a1a?text=Camisa+1910+-+Creme'">
+                        <img src="images/1910 corinthians.png" alt="Camiseta de 1910 - Creme" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F5F5DC/1a1a1a?text=Camisa+1910+-+Creme'">
                         <h3 class="text-xl font-bold corinthians-text">1910</h3>
                         <p class="text-xs text-gray-600">A camisa **creme** original. O início de uma lenda centenária.</p>
                     </div>
                     
                     <!-- Item 2: 1920 - A Alvinegra Clássica -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="images/camisa_1920_hq.jpg" alt="Camiseta de 1920 - Alvinegra Listrada" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1920+-+Alvinegra+Listrada'">
+                        <img src="images/camisa_1920.png" alt="Camiseta de 1920 - Alvinegra Listrada" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1920+-+Alvinegra+Listrada'">
                         <h3 class="text-xl font-bold corinthians-text">Anos 20</h3>
                         <p class="text-xs text-gray-600">O uniforme **alvinegro listrado** se consolida como padrão oficial.</p>
                     </div>
                     
                     <!-- Item 3: 1977 - Quebra do Jejum -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="images/camisa_1977_hq.jpg" alt="Camiseta de 1977 - Quebra do Jejum" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1977+-+Quebra+Jejum'">
+                        <img src="images/1977.png" alt="Camiseta de 1977 - Quebra do Jejum" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1977+-+Quebra+Jejum'">
                         <h3 class="text-xl font-bold corinthians-text">1977</h3>
                         <p class="text-xs text-gray-600">O manto sagrado da **Quebra do Jejum**, simples e inesquecível.</p>
                     </div>
 
                     <!-- Item 4: 1982/83 - Democracia Corinthiana -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="images/camisa_1982_hq.jpg" alt="Camiseta de 1982 - Democracia Corinthiana" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1982+-+Autogestão'">
+                        <img src="images/1982.png" alt="Camiseta de 1982 - Democracia Corinthiana" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1982+-+Autogestão'">
                         <h3 class="text-xl font-bold corinthians-text">1982</h3>
                         <p class="text-xs text-gray-600">A camisa da **Democracia Corinthiana** com o patrocínio "Kalunga".</p>
                     </div>
                     
                     <!-- Item 5: 1990 - Primeiro Brasileiro -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="images/camisa_1990_hq.jpg" alt="Camiseta de 1990 - 1º Brasileiro" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1990+-+1º+Brasileiro'">
+                        <img src="images/1990.png" alt="Camiseta de 1990 - 1º Brasileiro" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+1990+-+1º+Brasileiro'">
                         <h3 class="text-xl font-bold corinthians-text">1990</h3>
                         <p class="text-xs text-gray-600">O uniforme do primeiro título de **Campeonato Brasileiro** do clube.</p>
                     </div>
 
                     <!-- Item 6: 2000 - Mundial de Clubes -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="images/camisa_2000_hq.jpg" alt="Camiseta de 2000 - Mundial" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2000+-+Mundial'">
+                        <img src="images/2000.png" alt="Camiseta de 2000 - Mundial" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2000+-+Mundial'">
                         <h3 class="text-xl font-bold corinthians-text">2000</h3>
                         <p class="text-xs text-gray-600">O manto do primeiro **Mundial de Clubes da FIFA**, com Capetinha e Cia.</p>
                     </div>
                     
                     <!-- Item 7: 2012 - Libertadores e Bi-Mundial -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="images/camisa_2012_hq.jpg" alt="Camiseta de 2012 - Glória Eterna" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2012+-+Glória+Eterna'">
+                        <img src="images/2012.png" alt="Camiseta de 2012 - Glória Eterna" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2012+-+Glória+Eterna'">
                         <h3 class="text-xl font-bold corinthians-text">2012</h3>
                         <p class="text-xs text-gray-600">O uniforme da **Glória Eterna**, Libertadores invicta e Bi-Mundial com Sheik.</p>
                     </div>
 
                     <!-- Item 8: 2015 - Hexa Brasileiro -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="images/camisa_2015_hq.jpg" alt="Camiseta de 2015 - Hexa Brasileiro" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2015+-+Hexa+Brasileiro'">
+                        <img src="images/2015.png" alt="Camiseta de 2015 - Hexa Brasileiro" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2015+-+Hexa+Brasileiro'">
                         <h3 class="text-xl font-bold corinthians-text">2015</h3>
                         <p class="text-xs text-gray-600">O uniforme do **Hexacampeonato Brasileiro**, com a listra lateral ousada.</p>
                     </div>
 
                     <!-- Item 9: 2024 - Atual -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="images/camisa_2024_hq.jpg" alt="Camiseta de 2024 - Atual" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2024+-+Atual'">
+                        <img src="images/corinthians.png" alt="Camiseta de 2024 - Atual" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2024+-+Atual'">
                         <h3 class="text-xl font-bold corinthians-text">2024</h3>
+                        <p class="text-xs text-gray-600">O **manto atual**, seguindo a tradição de listras verticais alvinegras.</p>
+                    </div>
+                       <!-- Item 9: 2024 - Atual -->
+                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                        <img src="images/2025.png" alt="Camiseta de 2025 - Atual" class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200" onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFFFFF/000000?text=Camisa+2024+-+Atual'">
+                        <h3 class="text-xl font-bold corinthians-text">2025</h3>
                         <p class="text-xs text-gray-600">O **manto atual**, seguindo a tradição de listras verticais alvinegras.</p>
                     </div>
                 </div>
@@ -316,4 +331,3 @@
 
 </body>
 </html>
-
