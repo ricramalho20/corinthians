@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações - Sport Club Corinthians Paulista</title>
     <!-- Favicon para a aba do navegador -->
     <link rel="icon" href="images/corinthians_logo_pequeno.png" type="image/png">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ebebeb; /* Fundo mais suave e moderno */
+            background-color: #ebebeb;
+            /* Fundo mais suave e moderno */
             color: #1a1a1a;
         }
+
         /* O preto clássico do Corinthians foi movido para o banner */
-        .corinthians-white { color: #ffffff; }
-        .corinthians-text { color: #1a1a1a; }
-        /* Ouro mais rico e temático */
-        .bg-gold { background-color: #e4b50d; } 
-        .text-gold { color: #e4b50d; }
-        .border-alvinegro { border-color: #000000; }
-        .shadow-alvinegro { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); }
-        .info-card {
-            border-left: 5px solid #e4b50d; /* Usando o novo ouro */
-            transition: transform 0.3s ease-in-out;
-            background-color: #ffffff; /* Fundo branco para contraste */
+        .corinthians-white {
+            color: #ffffff;
         }
+
+        .corinthians-text {
+            color: #1a1a1a;
+        }
+
+        /* Ouro mais rico e temático */
+        .bg-gold {
+            background-color: #e4b50d;
+        }
+
+        .text-gold {
+            color: #e4b50d;
+        }
+
+        .border-alvinegro {
+            border-color: #000000;
+        }
+
+        .shadow-alvinegro {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .info-card {
+            border-left: 5px solid #e4b50d;
+            /* Usando o novo ouro */
+            transition: transform 0.3s ease-in-out;
+            background-color: #ffffff;
+            /* Fundo branco para contraste */
+        }
+
         .info-card:hover {
-            transform: translateY(-5px) scale(1.02); /* Efeito mais dramático ao passar o mouse */
+            transform: translateY(-5px) scale(1.02);
+            /* Efeito mais dramático ao passar o mouse */
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
+
         .title-highlight {
             position: relative;
             display: inline-block;
         }
+
         .title-highlight::after {
             content: '';
             position: absolute;
@@ -43,16 +70,20 @@
             bottom: -5px;
             width: 100%;
             height: 3px;
-            background-color: #e4b50d; /* Usando o novo ouro */
+            background-color: #e4b50d;
+            /* Usando o novo ouro */
         }
+
         .trophy-card {
             border: 1px solid #ddd;
             transition: all 0.3s;
         }
+
         .trophy-card:hover {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-color: #e4b50d;
         }
+
         /* Estilo para o Banner de Fundo do Cabeçalho */
         .header-banner {
             /* O background-image será definido via JavaScript usando o atributo 'data-banner-url' */
@@ -60,18 +91,22 @@
             background-position: center;
             position: relative;
         }
+
         .header-overlay {
-            background-color: rgba(0, 0, 0, 0.65); /* Overlay preto semi-transparente para legibilidade */
+            background-color: rgba(0, 0, 0, 0.65);
+            /* Overlay preto semi-transparente para legibilidade */
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
         }
+
         /* CSS do Carrossel (Mascote vertical) */
         #mascot-carousel {
-            height: 450px; 
+            height: 450px;
         }
+
         .carousel-slide {
             position: absolute;
             top: 0;
@@ -82,15 +117,18 @@
             display: block;
             opacity: 1;
         }
+
         .carousel-slide.hidden {
             display: none;
             opacity: 0;
         }
+
         .carousel-slide img {
             height: 100%;
             width: 100%;
-            object-fit: cover; 
+            object-fit: cover;
         }
+
         /* Estilo para preservar as quebras de linha do hino */
         .hino-completo {
             white-space: pre-wrap;
@@ -98,32 +136,41 @@
         }
     </style>
 </head>
+
 <body>
 
     <nav class="bg-black shadow-alvinegro fixed w-full z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo na barra de navegação -->
-                <div class="flex-shrink-0 flex items-center">
-                    <img src="images/corinthians_logo_pequeno.png" alt="Logo Corinthians" class="h-8 w-8 mr-3" onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
+        <div class="w-full">
+            <div class="flex items-center h-16">
+
+                <!-- Logo + texto TIMÃO -->
+                <div class="flex items-center pl-3"> <!-- pequeno espaço da borda -->
+                    <img src="images/corinthians_logo_pequeno.png" alt="Logo Corinthians" class="h-8 w-8 mr-2"
+                        onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
                     <span class="text-white text-2xl font-black tracking-wider">TIMÃO</span>
                 </div>
-                <!-- Links de Navegação -->
-                <div class="flex space-x-6">
-                    <a href="index.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Home</a>
-                    <!-- Link ativo -->
-                    <a href="informações.html" class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-gold">Informações</a>
-                    <a href="galeria.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Galeria</a>
-                    <a href="midia.html" class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Mídia / Fotos</a>
+
+                <!-- Links de navegação - levemente mais à direita -->
+                <div class="flex space-x-6 ml-8">
+                    <a href="index.html"
+                        class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Home</a>
+                    <a href="informações.html"
+                        class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-gold">Informações</a>
+                    <a href="galeria.html"
+                        class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Galeria</a>
+                    <a href="midia.html"
+                        class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Mídia /
+                        Fotos</a>
                 </div>
+
             </div>
         </div>
     </nav>
 
     <main class="pt-16">
-       
-        <section id="main-header" class="py-20 text-center border-b-8 border-gold header-banner" 
-                 data-banner-url="file:///Z:/DSA1/Workspace_GIT/projeto_website/projeto_website/images/banner_principal.png"> 
+
+        <section id="main-header" class="py-20 text-center border-b-8 border-gold header-banner"
+            data-banner-url="file:///Z:/DSA1/Workspace_GIT/projeto_website/projeto_website/images/banner_principal.png">
             <!-- Camada de Overlay para garantir que o texto seja legível sobre a imagem -->
             <div class="header-overlay"></div>
             <div class="max-w-4xl mx-auto px-4 relative z-10">
@@ -138,9 +185,9 @@
         <section class="py-12 px-4 md:px-8 bg-white">
             <div class="max-w-7xl mx-auto">
                 <h2 class="text-3xl font-extrabold corinthians-text mb-8 title-highlight">Curiosidades</h2>
-                
+
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    
+
                     <div class="p-6 rounded-xl shadow-md info-card">
                         <p class="text-4xl font-black text-gold mb-2">1910</p>
                         <p class="text-lg font-semibold">Data de Fundação</p>
@@ -168,49 +215,67 @@
         <!-- Seção 2: Linha do Tempo: A História Completa do Corinthians (Com Imagens Horizontais) -->
         <section class="py-16 px-4 md:px-8 bg-gray-100">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-extrabold corinthians-text mb-12 title-highlight">Linha do Tempo: Toda a História do Corinthians</h2>
-                
+                <h2 class="text-3xl font-extrabold corinthians-text mb-12 title-highlight">Linha do Tempo: Toda a
+                    História do Corinthians</h2>
+
                 <div class="space-y-12">
-                    
+
                     <!-- Fato Histórico 1: Fundação e Origens (1910) -->
                     <div class="grid md:grid-cols-2 gap-8 items-center p-6 bg-white rounded-xl shadow-lg">
                         <div class="md:order-2">
                             <h3 class="text-2xl font-bold text-gold mb-3">1910: A Origem Humilde e Popular</h3>
                             <p class="text-lg text-gray-700">
-                                Fundado por cinco operários (Joaquim Ambrosio, Antonio Pereira, Raphael Perrone, Anselmo Corrêa e Carlos Silva) no bairro do Bom Retiro, o Sport Club Corinthians Paulista nasceu para ser o "Time do Povo". Inspirado em um time inglês que fazia turnê pelo Brasil, o clube rapidamente se tornou um símbolo de inclusão social, abraçando todas as classes.
+                                Fundado por cinco operários (Joaquim Ambrosio, Antonio Pereira, Raphael Perrone, Anselmo
+                                Corrêa e Carlos Silva) no bairro do Bom Retiro, o Sport Club Corinthians Paulista nasceu
+                                para ser o "Time do Povo". Inspirado em um time inglês que fazia turnê pelo Brasil, o
+                                clube rapidamente se tornou um símbolo de inclusão social, abraçando todas as classes.
                             </p>
                         </div>
                         <div class="md:order-1">
                             <!-- Imagem Horizontal 1 (600x300) -->
-                            <img src="images/historia_fundacao.jpeg" alt="Antiga foto do time de 1910" class="w-full h-auto rounded-lg shadow-md border-2 border-gray-200 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x300/e4b50d/000000?text=1910+Fundação'">
+                            <img src="images/historia_fundacao.jpeg" alt="Antiga foto do time de 1910"
+                                class="w-full h-auto rounded-lg shadow-md border-2 border-gray-200 object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x300/e4b50d/000000?text=1910+Fundação'">
                         </div>
                     </div>
 
                     <!-- Fato Histórico 2: Primeiro Título e Crescimento (1922-1930) -->
                     <div class="grid md:grid-cols-2 gap-8 items-center p-6 bg-white rounded-xl shadow-lg">
                         <div class="md:order-1">
-                            <h3 class="text-2xl font-bold text-gold mb-3">Década de Ouro e o Tricampeonato (1922-1930)</h3>
+                            <h3 class="text-2xl font-bold text-gold mb-3">Década de Ouro e o Tricampeonato (1922-1930)
+                            </h3>
                             <p class="text-lg text-gray-700">
-                                Após o primeiro título paulista em 1914, o Corinthians consolidou sua hegemonia nos anos 20, tornando-se o primeiro tricampeão consecutivo do Campeonato Paulista (1922/23/24). Lendas como Tuffy e Neco ajudaram a construir a fama de "Time de Raça" e a garantir a popularidade crescente.
+                                Após o primeiro título paulista em 1914, o Corinthians consolidou sua hegemonia nos anos
+                                20, tornando-se o primeiro tricampeão consecutivo do Campeonato Paulista (1922/23/24).
+                                Lendas como Tuffy e Neco ajudaram a construir a fama de "Time de Raça" e a garantir a
+                                popularidade crescente.
                             </p>
                         </div>
                         <div class="md:order-2">
                             <!-- Imagem Horizontal 2 (600x300) -->
-                            <img src="images/historia_decada_ouro.png" alt="Time campeão dos anos 20" class="w-full h-auto rounded-lg shadow-md border-2 border-gray-200 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x300/000000/e4b50d?text=Década+de+20'">
+                            <img src="images/historia_decada_ouro.png" alt="Time campeão dos anos 20"
+                                class="w-full h-auto rounded-lg shadow-md border-2 border-gray-200 object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x300/000000/e4b50d?text=Década+de+20'">
                         </div>
                     </div>
-                    
+
                     <!-- Fato Histórico 3: Democracia Corinthiana e Grandes Ídolos (1970-1980) -->
                     <div class="grid md:grid-cols-2 gap-8 items-center p-6 bg-white rounded-xl shadow-lg">
                         <div class="md:order-2">
                             <h3 class="text-2xl font-bold text-gold mb-3">Anos 70/80: Democracia e Fim do Jejum</h3>
                             <p class="text-lg text-gray-700">
-                                O período foi marcado pelo fim de um longo jejum de títulos estaduais em 1977 e pelo movimento da Democracia Corinthiana nos anos 80, liderada por ícones como Sócrates e Casagrande. Este foi um momento em que o clube transcendeu o esporte, tornando-se um experimento de autogestão e liberdade.
+                                O período foi marcado pelo fim de um longo jejum de títulos estaduais em 1977 e pelo
+                                movimento da Democracia Corinthiana nos anos 80, liderada por ícones como Sócrates e
+                                Casagrande. Este foi um momento em que o clube transcendeu o esporte, tornando-se um
+                                experimento de autogestão e liberdade.
                             </p>
                         </div>
                         <div class="md:order-1">
                             <!-- Imagem Horizontal 3 (600x300) -->
-                            <img src="images/historia_democracia.jpg" alt="Sócrates com a faixa da Democracia Corinthiana" class="w-full h-auto rounded-lg shadow-md border-2 border-gray-200 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x300/e4b50d/000000?text=Democracia'">
+                            <img src="images/historia_democracia.jpg"
+                                alt="Sócrates com a faixa da Democracia Corinthiana"
+                                class="w-full h-auto rounded-lg shadow-md border-2 border-gray-200 object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x300/e4b50d/000000?text=Democracia'">
                         </div>
                     </div>
 
@@ -219,31 +284,39 @@
                         <div class="md:order-1">
                             <h3 class="text-2xl font-bold text-gold mb-3">1990-2012: Conquista do Mundo</h3>
                             <p class="text-lg text-gray-700">
-                                A década de 90 trouxe o primeiro Campeonato Brasileiro (1990) e o bicampeonato (1998/99). O novo milênio foi inaugurado com o primeiro Mundial da FIFA em 2000. O ápice veio em 2012, com a inédita e invicta Copa Libertadores da América e o segundo Mundial de Clubes, consolidando o clube no cenário global.
+                                A década de 90 trouxe o primeiro Campeonato Brasileiro (1990) e o bicampeonato
+                                (1998/99). O novo milênio foi inaugurado com o primeiro Mundial da FIFA em 2000. O ápice
+                                veio em 2012, com a inédita e invicta Copa Libertadores da América e o segundo Mundial
+                                de Clubes, consolidando o clube no cenário global.
                             </p>
                         </div>
                         <div class="md:order-2">
                             <!-- Imagem Horizontal 4 (600x300) -->
-                            <img src="images/historia_mundial_2012.jpg" alt="Comemoração do título mundial de 2012" class="w-full h-auto rounded-lg shadow-md border-2 border-gray-200 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x300/000000/e4b50d?text=Libertadores+e+Mundial'">
+                            <img src="images/historia_mundial_2012.jpg" alt="Comemoração do título mundial de 2012"
+                                class="w-full h-auto rounded-lg shadow-md border-2 border-gray-200 object-cover"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x300/000000/e4b50d?text=Libertadores+e+Mundial'">
                         </div>
                     </div>
 
                 </div>
             </div>
         </section>
-        
+
         <!-- Seção 3: Principais Títulos (Mantida) -->
         <section class="py-16 px-4 md:px-8 bg-white border-t border-gray-200">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-extrabold corinthians-text mb-8 title-highlight">Os Títulos Mais Vencedores</h2>
-                
+                <h2 class="text-3xl font-extrabold corinthians-text mb-8 title-highlight">Os Títulos Mais Vencedores
+                </h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    
+
                     <!-- Coluna 1: Mundiais -->
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg trophy-card">
                         <div class="flex items-center mb-4 border-b pb-2 border-gray-300">
                             <!-- Logo Mundial (agora w-12 h-12) -->
-                            <img src="images/logo_mundial.png" alt="Logo Mundial FIFA" class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400" onerror="this.onerror=null; this.src='https://placehold.co/48x48/000000/e4b50d?text=FIFA'">
+                            <img src="images/logo_mundial.png" alt="Logo Mundial FIFA"
+                                class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400"
+                                onerror="this.onerror=null; this.src='https://placehold.co/48x48/000000/e4b50d?text=FIFA'">
                             <h3 class="text-xl font-bold corinthians-text">Mundial de Clubes da FIFA</h3>
                         </div>
                         <ul class="list-disc list-inside space-y-1 text-gray-700 pl-4">
@@ -256,11 +329,14 @@
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg trophy-card">
                         <div class="flex items-center mb-4 border-b pb-2 border-gray-300">
                             <!-- Logo Libertadores (agora w-12 h-12) -->
-                            <img src="images/logo_libertadores.png" alt="Logo Copa Libertadores" class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400" onerror="this.onerror=null; this.src='https://placehold.co/48x48/0d2149/e4b50d?text=CONMEBOL'">
-                            <h3 class="text-xl font-bold corinthians-text">Copa Libertadores</h3>
+                            <img src="images/america.png" alt="Logo Copa Libertadores"
+                                class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400"
+                                onerror="this.onerror=null; this.src='https://placehold.co/48x48/0d2149/e4b50d?text=CONMEBOL'">
+                            <h3 class="text-xl font-bold corinthians-text">Continentais</h3>
                         </div>
                         <ul class="list-disc list-inside space-y-1 text-gray-700 pl-4">
-                            <li class="font-semibold">2012 (Invicto)</li>
+                            <li class="font-semibold">Libertadores - 2012 (Invicto)</li>
+                            <li class="font-semibold">Recopa Sul-Americana - 2013</li>
                         </ul>
                     </div>
 
@@ -268,7 +344,9 @@
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg trophy-card">
                         <div class="flex items-center mb-4 border-b pb-2 border-gray-300">
                             <!-- Logo Brasileiro (agora w-12 h-12) -->
-                            <img src="images/logo_brasileirao.png" alt="Logo Brasileirão" class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400" onerror="this.onerror=null; this.src='https://placehold.co/48x48/007f3f/ffffff?text=BR7'">
+                            <img src="images/logo_brasileirao.png" alt="Logo Brasileirão"
+                                class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400"
+                                onerror="this.onerror=null; this.src='https://placehold.co/48x48/007f3f/ffffff?text=BR7'">
                             <h3 class="text-xl font-bold corinthians-text">Campeonato Brasileiro (7)</h3>
                         </div>
                         <ul class="list-disc list-inside space-y-1 text-gray-700 pl-4">
@@ -282,12 +360,16 @@
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg trophy-card">
                         <div class="flex items-center mb-4 border-b pb-2 border-gray-300">
                             <!-- Logo Nacionais/Estaduais (agora w-12 h-12) -->
-                            <img src="images/copa_brasil.png" alt="Logo Nacionais e Estaduais" class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400" onerror="this.onerror=null; this.src='https://placehold.co/48x48/ffffff/000000?text=SP%2FCB'">
-                            <h3 class="text-xl font-bold corinthians-text">Nacionais</h3>
+                            <img src="images/nacional.jpg" alt="Logo Nacionais e Estaduais"
+                                class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400"
+                                onerror="this.onerror=null; this.src='https://placehold.co/48x48/ffffff/000000?text=SP%2FCB'">
+                            <h3 class="text-xl font-bold corinthians-text">Nacionais (6)</h3>
                         </div>
                         <ul class="list-disc list-inside space-y-1 text-gray-700 pl-4">
                             <li>Copa do Brasil (3 títulos)</li>
                             <li>Supercopa do Brasil (1 título)</li>
+                            <li>Supercopa Rei (1 título)</li>
+                            <li>Campeonato Brasileiro - Série B (1 título)</li>
                         </ul>
                     </div>
 
@@ -295,11 +377,14 @@
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg trophy-card">
                         <div class="flex items-center mb-4 border-b pb-2 border-gray-300">
                             <!-- Logo Nacionais/Estaduais (agora w-12 h-12) -->
-                            <img src="images/logo_paulistao.png" alt="Logo Nacionais e Estaduais" class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400" onerror="this.onerror=null; this.src='https://placehold.co/48x48/ffffff/000000?text=SP%2FCB'">
-                            <h3 class="text-xl font-bold corinthians-text">Estaduais</h3>
+                            <img src="images/paulista.png" alt="Logo Nacionais e Estaduais"
+                                class="w-12 h-12 object-contain mr-3 rounded-full border border-gray-400"
+                                onerror="this.onerror=null; this.src='https://placehold.co/48x48/ffffff/000000?text=SP%2FCB'">
+                            <h3 class="text-xl font-bold corinthians-text">Estaduais (2)</h3>
                         </div>
                         <ul class="list-disc list-inside space-y-1 text-gray-700 pl-4">
                             <li>Campeonato Paulista (30 títulos)</li>
+                            <li>Copa Paulista (1)</li>
                         </ul>
                     </div>
                 </div>
@@ -309,50 +394,64 @@
         <!-- Seção 4: Mascote e Hino (Mascote vertical e Hino completo) -->
         <section class="py-16 px-4 md:px-8 bg-gray-100 border-t border-gray-200">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-extrabold corinthians-text mb-8 title-highlight">Símbolos e Tradições Alvinegras</h2>
-                
+                <h2 class="text-3xl font-extrabold corinthians-text mb-8 title-highlight">Símbolos e Tradições
+                    Alvinegras</h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-lg text-gray-700">
-                    
+
                     <div class="p-6 bg-white rounded-xl shadow-lg">
                         <h3 class="text-2xl font-bold corinthians-text mb-3 text-gold">O Mosqueteiro (Mascote)</h3>
                         <p class="mb-4 text-gray-700">
-                            O mascote oficial do Corinthians é o Mosqueteiro. Ele foi adotado em 1913, após uma vitória histórica sobre o Palestra Itália (atual Palmeiras). A bravura e a união dos jogadores corintianos foram associadas ao lema "Um por todos e todos por um", popularizando o símbolo de honra e luta da equipe.
+                            O mascote oficial do Corinthians é o Mosqueteiro. Ele foi adotado em 1913, após uma vitória
+                            histórica sobre o Palestra Itália (atual Palmeiras). A bravura e a união dos jogadores
+                            corintianos foram associadas ao lema "Um por todos e todos por um", popularizando o símbolo
+                            de honra e luta da equipe.
                         </p>
-                        
+
                         <!-- START CAROUSEL - Carrossel com botões laterais e altura vertical (450px) -->
                         <div id="mascot-carousel" class="relative w-full overflow-hidden rounded-lg shadow-md mt-4">
                             <!-- Slides. A primeira começa visível (sem 'hidden') -->
                             <div class="carousel-slide">
                                 <!-- Imagem 1: Placeholder ajustado para altura 450px -->
-                                <img src="images/mosqueteiro_corinthians.jpg" alt="Mascote Corinthians (Clássico)" class="w-full h-auto object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x450/1a1a1a/e4b50d?text=MASCOTE+1'">
+                                <img src="images/mosqueteiro_corinthians.jpg" alt="Mascote Corinthians (Clássico)"
+                                    class="w-full h-auto object-cover"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x450/1a1a1a/e4b50d?text=MASCOTE+1'">
                             </div>
                             <div class="carousel-slide hidden">
                                 <!-- Imagem 2: Placeholder ajustado para altura 450px -->
-                                <img src="images/mosqueteiro_2.jpg" alt="Mascote Corinthians (Em Campo)" class="w-full h-auto object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x450/ff0000/ffffff?text=MASCOTE+2'">
+                                <img src="images/mosqueteiro_2.jpg" alt="Mascote Corinthians (Em Campo)"
+                                    class="w-full h-auto object-cover"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x450/ff0000/ffffff?text=MASCOTE+2'">
                             </div>
                             <div class="carousel-slide hidden">
                                 <!-- Imagem 3: Placeholder ajustado para altura 450px -->
-                                <img src="images/mosqueteiro_3.jpg" alt="Mascote Corinthians (Comemorando)" class="w-full h-auto object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x450/007f3f/ffffff?text=MASCOTE+3'">
+                                <img src="images/mosqueteiro_3.jpg" alt="Mascote Corinthians (Comemorando)"
+                                    class="w-full h-auto object-cover"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x450/007f3f/ffffff?text=MASCOTE+3'">
                             </div>
                             <div class="carousel-slide hidden">
                                 <!-- Imagem 4: Placeholder ajustado para altura 450px -->
-                                <img src="images/mosqueteiro_4.jpg" alt="Mascote Corinthians (Detalhe)" class="w-full h-auto object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x450/000000/e4b50d?text=MASCOTE+4'">
+                                <img src="images/mosqueteiro_4.jpg" alt="Mascote Corinthians (Detalhe)"
+                                    class="w-full h-auto object-cover"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x450/000000/e4b50d?text=MASCOTE+4'">
                             </div>
 
                             <!-- Botões de Navegação Lateral -->
                             <!-- Botão Anterior (Esquerda) -->
-                            <button onclick="plusSlides(-1)" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 md:p-3 rounded-r-lg hover:bg-opacity-75 transition z-20 focus:outline-none">
+                            <button onclick="plusSlides(-1)"
+                                class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 md:p-3 rounded-r-lg hover:bg-opacity-75 transition z-20 focus:outline-none">
                                 &#10094;
                             </button>
                             <!-- Botão Próximo (Direita) -->
-                            <button onclick="plusSlides(1)" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 md:p-3 rounded-l-lg hover:bg-opacity-75 transition z-20 focus:outline-none">
+                            <button onclick="plusSlides(1)"
+                                class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 md:p-3 rounded-l-lg hover:bg-opacity-75 transition z-20 focus:outline-none">
                                 &#10095;
                             </button>
                         </div>
                         <!-- END CAROUSEL -->
-                        
+
                     </div>
-                    
+
                     <div class="p-6 bg-white rounded-xl shadow-lg">
                         <h3 class="text-2xl font-bold corinthians-text mb-3 text-gold">O Hino Oficial - Completo</h3>
                         <p class="mb-4 text-gray-700">
@@ -396,22 +495,31 @@ Meu amor!
         <!-- Seção 5: Estádio - Neo Química Arena -->
         <section class="py-16 px-4 md:px-8 bg-black text-white">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-3xl font-extrabold text-gold mb-8 title-highlight">A Casa da Fiel: Neo Química Arena</h2>
-                
+                <h2 class="text-3xl font-extrabold text-gold mb-8 title-highlight">A Casa da Fiel: Neo Química Arena
+                </h2>
+
                 <div class="md:flex md:space-x-8 items-center">
                     <div class="md:w-1/2 mb-6 md:mb-0">
                         <!-- Imagem Placeholder da Arena -->
-                        <img src="images/arena_corinthians_hq.jpg" alt="Neo Química Arena" class="w-full h-auto rounded-xl shadow-alvinegro border-4 border-gold" onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/e4b50d?text=Templo+da+Fiel'">
+                        <img src="images/arena_corinthians_hq.jpg" alt="Neo Química Arena"
+                            class="w-full h-auto rounded-xl shadow-alvinegro border-4 border-gold"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1a1a1a/e4b50d?text=Templo+da+Fiel'">
                     </div>
                     <div class="md:w-1/2 space-y-4 text-gray-300">
-                        <p class="font-bold text-xl">Inaugurada em 2014, a Neo Química Arena (anteriormente Arena Corinthians) é um dos estádios mais modernos da América Latina e um marco na história do clube.</p>
+                        <p class="font-bold text-xl">Inaugurada em 2014, a Neo Química Arena (anteriormente Arena
+                            Corinthians) é um dos estádios mais modernos da América Latina e um marco na história do
+                            clube.</p>
                         <ul class="space-y-2 list-disc list-inside pl-4">
-                            <li><span class="font-semibold text-white">Capacidade:</span> Aproximadamente 49.200 espectadores.</li>
+                            <li><span class="font-semibold text-white">Capacidade:</span> Aproximadamente 49.200
+                                espectadores.</li>
                             <li><span class="font-semibold text-white">Localização:</span> Itaquera, São Paulo.</li>
-                            <li><span class="font-semibold text-white">Estrutura:</span> Foi um dos palcos da Copa do Mundo FIFA 2014 e é conhecida por sua fachada imponente e telão de LED.</li>
-                            <li><span class="font-semibold text-white">Recordes:</span> Palco de grandes vitórias e recordes de público da história recente do clube.</li>
+                            <li><span class="font-semibold text-white">Estrutura:</span> Foi um dos palcos da Copa do
+                                Mundo FIFA 2014 e é conhecida por sua fachada imponente e telão de LED.</li>
+                            <li><span class="font-semibold text-white">Recordes:</span> Palco de grandes vitórias e
+                                recordes de público da história recente do clube.</li>
                         </ul>
-                        <p class="text-base text-gray-400">A Arena é o principal ponto de encontro da Fiel, um templo de paixão e glória alvinegra.</p>
+                        <p class="text-base text-gray-400">A Arena é o principal ponto de encontro da Fiel, um templo de
+                            paixão e glória alvinegra.</p>
                     </div>
                 </div>
             </div>
@@ -456,7 +564,7 @@ Meu amor!
         function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("carousel-slide");
-            
+
             // Se não houver slides, encerra a função
             if (slides.length === 0) return;
 
@@ -468,7 +576,7 @@ Meu amor!
             for (i = 0; i < slides.length; i++) {
                 slides[i].classList.add('hidden');
             }
-            
+
             // Exibe o slide atual
             slides[slideIndex - 1].classList.remove('hidden');
         }
@@ -480,9 +588,9 @@ Meu amor!
         function plusSlides(n) {
             // Limpa o avanço automático ao interagir manualmente
             clearInterval(slideInterval);
-            
+
             showSlides(slideIndex += n);
-            
+
             // Reinicia o avanço automático
             startAutoSlide();
         }
@@ -493,25 +601,26 @@ Meu amor!
         function startAutoSlide() {
             // Limpa qualquer intervalo anterior para evitar duplicações
             clearInterval(slideInterval);
-            
+
             // Define o novo intervalo de 5000ms (5 segundos)
-            slideInterval = setInterval(function() {
+            slideInterval = setInterval(function () {
                 // Avança para o próximo slide
                 plusSlides(1);
             }, 5000);
         }
 
         // Inicializa o carrossel e o banner na carga completa da página
-        window.onload = function() {
+        window.onload = function () {
             // Carrega o banner customizado
             loadCustomBanner();
 
             // Exibe o primeiro slide (inicia o carrossel)
             showSlides(slideIndex);
-            
+
             // Inicia o avanço automático
             startAutoSlide();
         };
     </script>
 </body>
+
 </html>
