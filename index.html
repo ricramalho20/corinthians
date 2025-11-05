@@ -121,45 +121,62 @@
         <!-- Seção 1: Principais Conquistas -->
         <section id="conquistas" class="py-16 px-4 md:px-8 bg-white">
             <div class="max-w-6xl mx-auto text-center">
-                <h2 class="text-4xl font-extrabold corinthians-text mb-12 border-b-4 border-black inline-block pb-1">
+                <h2
+                    class="text-3xl sm:text-4xl font-extrabold corinthians-text mb-12 border-b-4 border-black inline-block pb-1">
                     Principais Conquistas
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+
+                    <!-- Bi-Mundial FIFA -->
                     <div
-                        class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
-                        <img src="logo_mundial.png" alt="Logo Mundial de Clubes FIFA" class="h-16 w-16 mx-auto mb-4">
+                        class="p-4 sm:p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
+                        <img src="logo_mundial.png" alt="Logo Mundial de Clubes FIFA"
+                            class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 object-contain">
                         <h3
-                            class="text-2xl font-extrabold text-black mb-2 border-b-2 border-gold inline-block pb-1 shadow-sm">
-                            Bi-Mundial FIFA</h3>
-                        <p class="text-gray-600">O Timão foi campeão do mundo em 2000 e 2012, mostrando a força da Fiel
-                            e levando o nome do Corinthians pra todo o planeta. Em 2012, a Fiel invadiu o Japão, pintou
-                            as ruas de preto e branco e mostrou o que é amor de verdade.</p>
+                            class="text-xl sm:text-2xl font-extrabold text-black mb-2 border-b-2 border-gold inline-block pb-1 shadow-sm">
+                            Bi-Mundial FIFA
+                        </h3>
+                        <p class="text-sm sm:text-base text-gray-600">
+                            O Timão foi campeão do mundo em 2000 e 2012, mostrando a força da Fiel
+                            e levando o nome do Corinthians para todo o planeta. Em 2012, a Fiel invadiu o Japão e
+                            pintou as ruas de preto e branco.
+                        </p>
                     </div>
 
+                    <!-- Libertadores Invicto -->
                     <div
-                        class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
-                        <img src="logo_libertadores.png" alt="Logo Copa Libertadores" class="h-16 w-16 mx-auto mb-4">
+                        class="p-4 sm:p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
+                        <img src="logo_libertadores.png" alt="Logo Copa Libertadores"
+                            class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 object-contain">
                         <h3
-                            class="text-2xl font-extrabold text-black mb-2 border-b-2 border-gold inline-block pb-1 shadow-sm">
-                            Libertadores Invicto</h3>
-                        <p class="text-gray-600">Em 2012, o Corinthians realizou o grande sonho e ganhou a Libertadores
-                            sem perder nenhum jogo, jogando com raça e coração. Essa conquista abriu o caminho pra
-                            glória mundial no Japão.</p>
+                            class="text-xl sm:text-2xl font-extrabold text-black mb-2 border-b-2 border-gold inline-block pb-1 shadow-sm">
+                            Libertadores Invicto
+                        </h3>
+                        <p class="text-sm sm:text-base text-gray-600">
+                            Em 2012, o Corinthians conquistou a Libertadores sem perder nenhum jogo, com raça e coração.
+                            Essa vitória abriu o caminho para a glória mundial no Japão.
+                        </p>
                     </div>
 
+                    <!-- Hepta Brasileiro -->
                     <div
-                        class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
-                        <img src="logo_brasileirao.png" alt="Logo Campeonato Brasileiro" class="h-16 w-16 mx-auto mb-4">
+                        class="p-4 sm:p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
+                        <img src="logo_brasileirao.png" alt="Logo Campeonato Brasileiro"
+                            class="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 object-contain">
                         <h3
-                            class="text-2xl font-extrabold text-black mb-2 border-b-2 border-gold inline-block pb-1 shadow-sm">
-                            Hepta Brasileiro</h3>
-                        <p class="text-gray-600">O Corinthians é sete vezes campeão brasileiro, com times que marcaram
-                            época e mostraram garra em cada título. A força do Timão no Brasil ajudou a construir o
-                            caminho para as conquistas maiores do mundo.</p>
+                            class="text-xl sm:text-2xl font-extrabold text-black mb-2 border-b-2 border-gold inline-block pb-1 shadow-sm">
+                            Hepta Brasileiro
+                        </h3>
+                        <p class="text-sm sm:text-base text-gray-600">
+                            O Corinthians é sete vezes campeão brasileiro, com times que marcaram época e mostraram
+                            garra em cada título.
+                        </p>
                     </div>
+
                 </div>
             </div>
         </section>
+
 
         <!-- Seção 2: Ídolos -->
         <section id="idolos" class="py-16 px-4 md:px-8 corinthians-black">
@@ -308,41 +325,41 @@
 
     <!-- Scripts -->
     <script>
-    // Mobile Menu
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+        // Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-    // Navbar Sticky e barra ativa
-    const navbar = document.querySelector('nav');
+        // Navbar Sticky e barra ativa
+        const navbar = document.querySelector('nav');
 
-    // Função para aplicar o estilo do navbar
-    function updateNavbar() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('bg-black', 'shadow-alvinegro');
-        } else {
-            navbar.classList.add('bg-black', 'shadow-alvinegro'); // Mantém sempre preto
+        // Função para aplicar o estilo do navbar
+        function updateNavbar() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black', 'shadow-alvinegro');
+            } else {
+                navbar.classList.add('bg-black', 'shadow-alvinegro'); // Mantém sempre preto
+            }
         }
-    }
 
-    // Chama ao rolar a página
-    window.addEventListener('scroll', updateNavbar);
+        // Chama ao rolar a página
+        window.addEventListener('scroll', updateNavbar);
 
-    // Chama imediatamente ao carregar para corrigir cor no topo
-    window.addEventListener('load', updateNavbar);
+        // Chama imediatamente ao carregar para corrigir cor no topo
+        window.addEventListener('load', updateNavbar);
 
-    // Destacar página ativa
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => {
-        if (link.href === window.location.href) {
-            link.classList.add('border-b-2', 'border-gold');
-        } else {
-            link.classList.remove('border-b-2', 'border-gold');
-        }
-    });
-</script>
+        // Destacar página ativa
+        const links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('border-b-2', 'border-gold');
+            } else {
+                link.classList.remove('border-b-2', 'border-gold');
+            }
+        });
+    </script>
 
 
 
