@@ -84,6 +84,72 @@
             background-color: #ffd700;
             transform: scale(1.2);
         }
+
+        /* ======== VERSÃO MOBILE ======== */
+        @media (max-width: 768px) {
+            .gallery-card img {
+                height: 40vh;
+            }
+
+            #main-carousel {
+                height: 35vh;
+            }
+
+            .carousel-overlay h1 {
+                font-size: 2rem;
+            }
+
+            .carousel-overlay p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* GALERIA CARROSSEL HORIZONTAL */
+        #gallery-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        #gallery-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .gallery-wrapper {
+            position: relative;
+        }
+
+        .gallery-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.3s;
+        }
+
+        .gallery-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .gallery-btn.left {
+            left: 0.5rem;
+        }
+
+        .gallery-btn.right {
+            right: 0.5rem;
+        }
+
+        .gallery-card {
+            min-width: 200px;
+            flex: 0 0 auto;
+        }
     </style>
 </head>
 
@@ -193,9 +259,10 @@
         <section id="camisetas-galeria" class="py-16 px-4 md:px-8 bg-gray-100">
             <div class="max-w-7xl mx-auto text-center">
                 <h2 class="text-4xl font-extrabold corinthians-text mb-12 border-b-4 border-black inline-block pb-1">
-                    Camisetas Históricas em Ordem Cronológica</h2>
+                    Camisetas Históricas em Ordem Cronológica
+                </h2>
 
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
 
                     <!-- Camisetas históricas específicas -->
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
@@ -206,7 +273,7 @@
                     </div>
 
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="camisa_1920.png" alt="Camiseta de 1910"
+                        <img src="camisa_1920.png" alt="Camiseta de 1920"
                             class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
                         <h3 class="text-xl font-bold corinthians-text">1920</h3>
                         <p class="text-xs text-gray-600">Camiseta original do início do Corinthians.</p>
@@ -227,12 +294,11 @@
                     </div>
 
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="1990.png" alt="Camiseta de 1990 - primeira versão"
+                        <img src="1990.png" alt="Camiseta de 1990"
                             class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
                         <h3 class="text-xl font-bold corinthians-text">1990</h3>
                         <p class="text-xs text-gray-600">Primeira versão da camiseta de 1990.</p>
                     </div>
-
 
                     <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
                         <img src="camiseta_2000.png" alt="Camiseta de 2000"
@@ -273,7 +339,21 @@
 
             </div>
         </section>
+
     </main>
+
+    <footer id="rodape" class="bg-black py-8 px-4 md:px-8 mt-12">
+        <div class="max-w-6xl mx-auto text-center text-gray-300">
+            <h4 class="text-xl font-bold mb-4 corinthians-white">Site Desenvolvido para a Atividade Final de DSA1</h4>
+            <p class="text-sm mb-2">Turma: INF1ET</p>
+            <p class="text-sm">Desenvolvido em 2025</p>
+            <div class="mt-4 text-xs">
+                <p>Integrantes:</p>
+                <p>° Pedro Guilherme N°26</p>
+                <p>° Ricardo Ramalho N°32</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- SCRIPT DO CARROSSEL -->
     <script>
@@ -320,10 +400,20 @@
         prevBtn.addEventListener('click', prevSlide);
         nextBtn.addEventListener('click', nextSlide);
 
-        // Slide automático
-        setInterval(nextSlide, 5000);
+        // Troca automática a cada 3 segundos
+        setInterval(() => {
+            nextSlide();
+        }, 3000); // 3000ms = 3 segundos
+
     </script>
 
+    <script>
+        // Função da galeria horizontal
+        function scrollGallery(amount) {
+            const gallery = document.getElementById('gallery-container');
+            gallery.scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script>
 </body>
 
 </html>
