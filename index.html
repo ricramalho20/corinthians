@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corinthians - O Time do Povo</title>
-    <!-- Favicon para a aba do navegador -->
     <link rel="icon" href="corinthians_logo_pequeno.png" type="image/png">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -49,18 +48,19 @@
 
 <body>
 
+    <!-- Navbar -->
     <nav class="bg-black shadow-alvinegro fixed w-full z-10">
         <div class="w-full">
             <div class="flex items-center h-16">
 
-                <!-- Logo + texto TIMÃO -->
+                <!-- Logo + TIMÃO -->
                 <div class="flex items-center pl-3">
                     <img src="corinthians_logo_pequeno.png" alt="Logo Corinthians" class="h-8 w-8 mr-2"
                         onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
                     <span class="text-white text-2xl font-black tracking-wider">TIMÃO</span>
                 </div>
 
-                <!-- Links de navegação Desktop -->
+                <!-- Links Desktop -->
                 <div class="flex space-x-6 ml-8 hidden md:flex">
                     <a href="index.html"
                         class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-gold">Home</a>
@@ -97,6 +97,7 @@
 
     <main class="pt-16">
 
+        <!-- Banner Principal -->
         <section id="home" class="relative h-[20vh] md:h-[60vh] flex items-center justify-center">
             <img src="banner_principal1.jpg" alt="Estádio Neo Química Arena com torcida"
                 class="absolute inset-0 w-full h-full object-cover opacity-90"
@@ -123,9 +124,7 @@
                 <h2 class="text-4xl font-extrabold corinthians-text mb-12 border-b-4 border-black inline-block pb-1">
                     Principais Conquistas
                 </h2>
-
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Conquistas -->
                     <div
                         class="p-6 rounded-xl bg-gray-100 shadow-lg transform hover:scale-[1.03] transition duration-300 border-t-4 border-black">
                         <img src="logo_mundial.png" alt="Logo Mundial de Clubes FIFA" class="h-16 w-16 mx-auto mb-4">
@@ -166,10 +165,11 @@
         <section id="idolos" class="py-16 px-4 md:px-8 corinthians-black">
             <div class="max-w-6xl mx-auto text-center">
                 <h2 class="text-4xl font-extrabold corinthians-white mb-12 border-b-4 text-gold inline-block pb-1">
-                    Nossos Maiores Ídolos</h2>
+                    Nossos Maiores Ídolos
+                </h2>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                    <!-- Ídolos -->
+                    <!-- Sócrates -->
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
                         <img src="idolo_socrates_hq.jpg" alt="Foto de Sócrates em alta qualidade"
                             class="w-full h-64 sm:h-80 object-cover rounded-lg border-2 border-black">
@@ -177,6 +177,7 @@
                         <p class="text-sm text-gray-600">O Doutor e líder da Democracia.</p>
                     </div>
 
+                    <!-- Rivelino -->
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
                         <img src="idolo_rivelino_hq.jpg" alt="Foto de Rivelino em alta qualidade"
                             class="w-full h-64 sm:h-80 object-cover rounded-lg border-2 border-black">
@@ -184,6 +185,7 @@
                         <p class="text-sm text-gray-600">O Patada Atômica e o Reizinho do Parque.</p>
                     </div>
 
+                    <!-- Carlos Tevez -->
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
                         <img src="idolo_carlos_tevez_hq.jpg" alt="Foto de Carlos Tevez em alta qualidade"
                             class="w-full h-64 sm:h-80 object-cover rounded-lg border-2 border-black">
@@ -191,6 +193,7 @@
                         <p class="text-sm text-gray-600">A raça argentina que liderou a conquista de 2005.</p>
                     </div>
 
+                    <!-- Cássio -->
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
                         <img src="idolo_cassio_hq.jpg" alt="Foto de Cássio em alta qualidade"
                             class="w-full h-64 sm:h-80 object-cover rounded-lg border-2 border-black">
@@ -198,6 +201,7 @@
                         <p class="text-sm text-gray-600">O Gigante e o maior campeão do clube.</p>
                     </div>
 
+                    <!-- Ronaldo Fenômeno -->
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
                         <img src="idolo_ronaldo_hq.jpg" alt="Foto de Ronaldo Fenômeno"
                             class="w-full h-64 sm:h-80 object-cover rounded-lg border-2 border-black">
@@ -205,6 +209,7 @@
                         <p class="text-sm text-gray-600">A lenda global que escolheu o Timão para a sua volta.</p>
                     </div>
 
+                    <!-- Marcelinho Carioca -->
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
                         <img src="idolo_marcelinho_hq.jpg" alt="Foto de Marcelinho Carioca"
                             class="w-full h-64 sm:h-80 object-cover rounded-lg border-2 border-black">
@@ -212,6 +217,7 @@
                         <p class="text-sm text-gray-600">O Pé de Anjo e o maior artilheiro da história do clube.</p>
                     </div>
 
+                    <!-- Emerson Sheik -->
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
                         <img src="idolo_emerson_hq.jpg" alt="Foto de Emerson Sheik"
                             class="w-full h-64 sm:h-80 object-cover rounded-lg border-2 border-black">
@@ -220,6 +226,7 @@
                             Libertadores 2012.</p>
                     </div>
 
+                    <!-- Edmilson Capetinha -->
                     <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.05] transition duration-300">
                         <img src="idolo_capetinha_hq.jpg" alt="Foto de Edmilson Capetinha"
                             class="w-full h-64 sm:h-80 object-cover rounded-lg border-2 border-black">
@@ -244,7 +251,6 @@
                 <h2
                     class="text-4xl font-extrabold corinthians-text text-center mb-12 border-b-4 border-black inline-block pb-1">
                     Nossa Casa: Neo Química Arena</h2>
-
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-xl shadow-alvinegro p-6">
                     <div class="order-2 md:order-1">
@@ -286,6 +292,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer id="rodape" class="corinthians-black py-8 px-4 md:px-8">
         <div class="max-w-6xl mx-auto text-center text-gray-300">
             <h4 class="text-xl font-bold mb-4 corinthians-white">Site Desenvolvido para a Atividade Final de DSA1</h4>
@@ -299,29 +306,44 @@
         </div>
     </footer>
 
-    <!-- Script Mobile -->
+    <!-- Scripts -->
     <script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const navbar = document.querySelector('nav');
+    // Mobile Menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
 
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
+    // Navbar Sticky e barra ativa
+    const navbar = document.querySelector('nav');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      // Adiciona classe que esconde os links desktop e mostra o botão hamburger
-      navbar.classList.add('bg-black', 'shadow-alvinegro');
-      navbar.querySelector('.md\\:flex').classList.add('hidden'); // esconde links desktop
-      navbar.querySelector('.md\\:hidden').classList.remove('hidden'); // mostra botão mobile
-    } else {
-      // Volta ao normal
-      navbar.querySelector('.md\\:flex').classList.remove('hidden'); // mostra links desktop
-      navbar.querySelector('.md\\:hidden').classList.add('hidden'); // esconde botão mobile
+    // Função para aplicar o estilo do navbar
+    function updateNavbar() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-black', 'shadow-alvinegro');
+        } else {
+            navbar.classList.add('bg-black', 'shadow-alvinegro'); // Mantém sempre preto
+        }
     }
-  });
+
+    // Chama ao rolar a página
+    window.addEventListener('scroll', updateNavbar);
+
+    // Chama imediatamente ao carregar para corrigir cor no topo
+    window.addEventListener('load', updateNavbar);
+
+    // Destacar página ativa
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('border-b-2', 'border-gold');
+        } else {
+            link.classList.remove('border-b-2', 'border-gold');
+        }
+    });
 </script>
+
 
 
 </body>

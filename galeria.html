@@ -47,6 +47,8 @@
         .gallery-card {
             border: 3px solid #000000;
             transition: all 0.3s ease-in-out;
+            min-width: 200px;
+            flex: 0 0 auto;
         }
 
         .gallery-card:hover {
@@ -138,19 +140,6 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        .gallery-btn.left {
-            left: 0.5rem;
-        }
-
-        .gallery-btn.right {
-            right: 0.5rem;
-        }
-
-        .gallery-card {
-            min-width: 200px;
-            flex: 0 0 auto;
-        }
-
         /* EFEITO HOVER TIMÃO */
         .timão-hover {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -179,7 +168,7 @@
                     <span class="text-white text-2xl font-black tracking-wider">TIMÃO</span>
                 </div>
 
-                <!-- Links de navegação Desktop -->
+                <!-- Links Desktop -->
                 <div class="flex space-x-6 ml-8 hidden md:flex">
                     <a href="index.html"
                         class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Home</a>
@@ -188,7 +177,6 @@
                     <a href="galeria.html"
                         class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-gold">Galeria</a>
                 </div>
-
 
                 <!-- Botão Mobile -->
                 <div class="md:hidden ml-auto">
@@ -200,10 +188,11 @@
                         </svg>
                     </button>
                 </div>
+
             </div>
 
             <!-- Menu Mobile -->
-            <div id="mobile-menu" class="hidden md:hidden mt-2 space-y-2 px-2 pb-3">
+            <div id="mobile-menu" class="hidden mt-2 space-y-2 px-2 pb-3">
                 <a href="index.html"
                     class="block corinthians-white font-medium hover:text-gray-400 transition duration-300">Home</a>
                 <a href="informações.html"
@@ -213,7 +202,6 @@
             </div>
         </div>
     </nav>
-
 
     <main class="pt-16">
         <!-- CARROSSEL -->
@@ -295,87 +283,96 @@
 
         <!-- GALERIA COMPLETA -->
         <section id="camisetas-galeria" class="py-16 px-4 md:px-8 bg-gray-100">
-            <div class="max-w-7xl mx-auto text-center">
-                <h2 class="text-4xl font-extrabold corinthians-text mb-12 border-b-4 border-black inline-block pb-1">
-                    Camisetas Históricas em Ordem Cronológica
-                </h2>
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-extrabold corinthians-text mb-12 border-b-4 border-black inline-block pb-1">
+            Camisetas Históricas em Ordem Cronológica
+        </h2>
 
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-                    <!-- Camisetas históricas específicas -->
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="1910 corinthians.png" alt="Camiseta de 1910"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">1910</h3>
-                        <p class="text-xs text-gray-600">Camiseta original do início do Corinthians.</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="camisa_1920.png" alt="Camiseta de 1920"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">1920</h3>
-                        <p class="text-xs text-gray-600">Camiseta original do início do Corinthians.</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="camiseta_1977.png" alt="Camiseta de 1977"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">1977</h3>
-                        <p class="text-xs text-gray-600">Camiseta da Quebra do Jejum.</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="1982.png" alt="Camiseta de 1982"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">1982</h3>
-                        <p class="text-xs text-gray-600">Camiseta da Democracia Corinthiana.</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="1990.png" alt="Camiseta de 1990"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">1990</h3>
-                        <p class="text-xs text-gray-600">Primeira versão da camiseta de 1990.</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="camiseta_2000.png" alt="Camiseta de 2000"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">2000</h3>
-                        <p class="text-xs text-gray-600">Camiseta do Mundial de 2000.</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="2012.png" alt="Camiseta de 2012"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">2012</h3>
-                        <p class="text-xs text-gray-600">Camiseta da Libertadores invicta de 2012.</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="2015.png" alt="Camiseta de 2015"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">2015</h3>
-                        <p class="text-xs text-gray-600">Camiseta de 2015, modelo icônico da década.</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="2024.jfif" alt="Camiseta de 2024"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">2024</h3>
-                        <p class="text-xs text-gray-600">Modelo atual de 2024, unindo tradição e modernidade.</p>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
-                        <img src="2025.png" alt="Camiseta de 2025"
-                            class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
-                        <h3 class="text-xl font-bold corinthians-text">2025</h3>
-                        <p class="text-xs text-gray-600">Próximo modelo futuro, conceito moderno e inovador.</p>
-                    </div>
-
-                </div>
+            <!-- 1910 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="1910 corinthians.png" alt="Camiseta de 1910"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">1910</h3>
+                <p class="text-xs text-gray-600">Camiseta original do início do Corinthians.</p>
             </div>
-        </section>
+
+            <!-- 1920 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="camisa_1920.png" alt="Camiseta de 1920"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">1920</h3>
+                <p class="text-xs text-gray-600">Camiseta clássica da década de 20.</p>
+            </div>
+
+            <!-- 1977 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="camiseta_1977.png" alt="Camiseta de 1977"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">1977</h3>
+                <p class="text-xs text-gray-600">Camiseta da Quebra do Jejum.</p>
+            </div>
+
+            <!-- 1982 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="1982.png" alt="Camiseta de 1982"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">1982</h3>
+                <p class="text-xs text-gray-600">Camiseta da Democracia Corinthiana.</p>
+            </div>
+
+            <!-- 1990 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="1990.png" alt="Camiseta de 1990"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">1990</h3>
+                <p class="text-xs text-gray-600">Primeira versão da camiseta de 1990.</p>
+            </div>
+
+            <!-- 2000 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="camiseta_2000.png" alt="Camiseta de 2000"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">2000</h3>
+                <p class="text-xs text-gray-600">Camiseta do Mundial de 2000.</p>
+            </div>
+
+            <!-- 2012 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="2012.png" alt="Camiseta de 2012"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">2012</h3>
+                <p class="text-xs text-gray-600">Camiseta da Libertadores invicta de 2012.</p>
+            </div>
+
+            <!-- 2015 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="2015.png" alt="Camiseta de 2015"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">2015</h3>
+                <p class="text-xs text-gray-600">Modelo icônico da década de 2010.</p>
+            </div>
+
+            <!-- 2024 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="2024.jfif" alt="Camiseta de 2024"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">2024</h3>
+                <p class="text-xs text-gray-600">Modelo atual, unindo tradição e modernidade.</p>
+            </div>
+
+            <!-- 2025 -->
+            <div class="bg-white rounded-xl shadow-lg p-3 gallery-card">
+                <img src="2025.png" alt="Camiseta de 2025"
+                    class="w-full h-64 object-contain rounded-lg mb-3 border border-gray-200">
+                <h3 class="text-xl font-bold corinthians-text">2025</h3>
+                <p class="text-xs text-gray-600">Próximo modelo futuro, conceito moderno e inovador.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     </main>
 
@@ -392,8 +389,26 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DO CARROSSEL -->
+    <!-- SCRIPT COMPLETO: CARROSSEL + MENU MOBILE -->
     <script>
+        // MENU MOBILE
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // NAVBAR FIXA PRETA
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            navbar.classList.add('bg-black', 'shadow-alvinegro');
+        });
+        window.addEventListener('load', () => {
+            navbar.classList.add('bg-black', 'shadow-alvinegro');
+        });
+
+        // CARROSSEL
         const carouselContainer = document.getElementById('carousel-container');
         const slides = document.querySelectorAll('.carousel-slide');
         const prevBtn = document.getElementById('prev-btn');
@@ -441,14 +456,6 @@
         }, 3000);
     </script>
 
-    <script>
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        hamburgerBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
 </body>
 
 </html>
