@@ -144,14 +144,14 @@
             <div class="flex items-center h-16">
 
                 <!-- Logo + texto TIMÃO -->
-                <div class="flex items-center pl-3"> <!-- pequeno espaço da borda -->
+                <div class="flex items-center pl-3">
                     <img src="corinthians_logo_pequeno.png" alt="Logo Corinthians" class="h-8 w-8 mr-2"
                         onerror="this.onerror=null; this.src='https://placehold.co/32x32/ffffff/000000?text=Logo'">
                     <span class="text-white text-2xl font-black tracking-wider">TIMÃO</span>
                 </div>
 
-                <!-- Links de navegação - levemente mais à direita -->
-                <div class="flex space-x-6 ml-8">
+                <!-- Links de navegação Desktop ao lado do TIMÃO -->
+                <div class="flex space-x-6 ml-4 hidden md:flex">
                     <a href="index.html"
                         class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Home</a>
                     <a href="informações.html"
@@ -160,9 +160,33 @@
                         class="corinthians-white font-medium hover:text-gray-400 transition duration-300">Galeria</a>
                 </div>
 
+
+                <!-- Botão Mobile -->
+                <div class="md:hidden ml-auto">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+
             </div>
+
+            <!-- Menu Mobile -->
+            <div id="mobile-menu" class="md:hidden hidden flex-col bg-black px-4 py-2 space-y-2">
+                <a href="index.html"
+                    class="corinthians-white font-medium hover:text-gray-400 transition duration-300 block">Home</a>
+                <a href="informações.html"
+                    class="corinthians-white font-bold hover:text-gray-400 transition duration-300 border-b-2 border-gold block">Informações</a>
+                <a href="galeria.html"
+                    class="corinthians-white font-medium hover:text-gray-400 transition duration-300 block">Galeria</a>
+        </div>
+
         </div>
     </nav>
+
 
     <main class="pt-16">
 
@@ -269,8 +293,7 @@
                         </div>
                         <div class="md:order-1">
                             <!-- Imagem Horizontal 3 (600x300) -->
-                            <img src="historia_democracia.jpg"
-                                alt="Sócrates com a faixa da Democracia Corinthiana"
+                            <img src="historia_democracia.jpg" alt="Sócrates com a faixa da Democracia Corinthiana"
                                 class="w-full h-auto rounded-lg shadow-md border-2 border-gray-200 object-cover"
                                 onerror="this.onerror=null; this.src='https://placehold.co/600x300/e4b50d/000000?text=Democracia'">
                         </div>
@@ -558,7 +581,6 @@ Dos desportistas do Brasil
             const header = document.getElementById('main-header');
             if (header) {
                 const url = header.getAttribute('data-banner-url');
-                // Adiciona a imagem de fundo lida do atributo data-banner-url
                 if (url) {
                     header.style.backgroundImage = `url('${url}')`;
                 }
@@ -569,70 +591,55 @@ Dos desportistas do Brasil
         var slideIndex = 1;
         var slideInterval;
 
-        /**
-         * Exibe o slide no índice especificado (n) e esconde os outros.
-         * @param {number} n - O índice do slide a ser exibido.
-         */
         function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("carousel-slide");
-
-            // Se não houver slides, encerra a função
             if (slides.length === 0) return;
 
-            // Ajusta o índice para manter o ciclo
             if (n > slides.length) { slideIndex = 1 }
             if (n < 1) { slideIndex = slides.length }
 
-            // Esconde todos os slides
             for (i = 0; i < slides.length; i++) {
                 slides[i].classList.add('hidden');
             }
 
-            // Exibe o slide atual
             slides[slideIndex - 1].classList.remove('hidden');
         }
 
-        /**
-         * Avança ou retrocede o carrossel.
-         * @param {number} n - 1 para próximo (direita), -1 para anterior (esquerda).
-         */
         function plusSlides(n) {
-            // Limpa o avanço automático ao interagir manualmente
             clearInterval(slideInterval);
-
             showSlides(slideIndex += n);
-
-            // Reinicia o avanço automático
             startAutoSlide();
         }
 
-        /**
-         * Inicia o avanço automático dos slides (5s).
-         */
         function startAutoSlide() {
-            // Limpa qualquer intervalo anterior para evitar duplicações
             clearInterval(slideInterval);
-
-            // Define o novo intervalo de 5000ms (5 segundos)
             slideInterval = setInterval(function () {
-                // Avança para o próximo slide
                 plusSlides(1);
             }, 5000);
         }
 
-        // Inicializa o carrossel e o banner na carga completa da página
+        // Inicializa tudo após a página carregar
         window.onload = function () {
-            // Carrega o banner customizado
+            // Banner
             loadCustomBanner();
 
-            // Exibe o primeiro slide (inicia o carrossel)
+            // Carrossel
             showSlides(slideIndex);
-
-            // Inicia o avanço automático
             startAutoSlide();
+
+            // Menu Hamburger Mobile
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
         };
     </script>
+
+
 </body>
 
 </html>
